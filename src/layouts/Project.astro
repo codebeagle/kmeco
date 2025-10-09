@@ -1,0 +1,17 @@
+---
+import Default from './Default.astro';
+import BannerPage from '../components/BannerPage.astro';
+import SideBySideStats from '../components/SideBySideStats.astro';
+import ContentTextList from '../components/ContentTextList.astro';
+import GalleryImages from '../components/GalleryImages.astro';
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Default {frontmatter}>
+  <BannerPage title={frontmatter.title}></BannerPage>
+  <SideBySideStats></SideBySideStats>
+  <ContentTextList></ContentTextList>
+  <GalleryImages></GalleryImages>
+</Default>

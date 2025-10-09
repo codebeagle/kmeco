@@ -1,0 +1,17 @@
+---
+import Default from './Default.astro';
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Default {frontmatter}>
+	<section>
+		<h1>{frontmatter.title}</h1>
+		<p>Author: {frontmatter.author}</p>
+		<img src="" alt="">
+	</section>
+	<section>
+		<slot />
+	</section>
+</Default>
