@@ -1,3 +1,33 @@
+---
+const componentData = {
+  eyebrow: '',
+  heading: '',
+  content: '',
+  cta: {
+    ctaLabel: '',
+    ctaHref: '' 
+  },
+  cards: [
+    {
+      cardHeading: 'Experts in SCADA',
+      cardContent: 'We know our stuff when it comes to industrial control  and data systems  using SCADA technology and best practices.'
+    },
+    {
+      cardHeading: 'Full equipment lineup',
+      cardContent: 'We have bucket trucks, a crane, a mini excavator and all the tools needed to get your project done the right way.' 
+    },
+    {
+      cardHeading: 'Family owned & operated',
+      cardContent: 'KMECO was founded in Elsinore, UT and family owned and operated since 19##. When you call KMECO, we answer.'
+    },
+    {
+      cardHeading: 'Licensed & certified',
+      cardContent: 'We’re fully insured  and licensed as Electrical Contractors and Master Electricians.'
+    }
+  ]
+}
+---
+
 <section>
   <div class="container">
     <div class="row">
@@ -11,22 +41,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="card">
-        <h3>Experts in SCADA</h3>
-        <p>We know our stuff when it comes to industrial control  and data systems  using SCADA technology and best practices.</p>
-      </div>
-      <div class="card">
-        <h3>Full equipment lineup</h3>
-        <p>We have bucket trucks, a crane, a mini excavator and all the tools needed to get your project done the right way. </p>
-      </div>
-      <div class="card">
-        <h3>Family owned & operated</h3>
-        <p>KMECO was founded in Elsinore, UT and family owned and operated since 19##. When you call KMECO, we answer. </p>
-      </div>
-      <div class="card">
-        <h3>Licensed & certified</h3>
-        <p>We’re fully insured  and licensed as Electrical Contractors and Master Electricians.</p>
-      </div>
+      {componentData.cards.map((card) => 
+        <div class="card">
+          <h3>{card.cardHeading}</h3>
+          <p>{card.cardContent}</p>
+        </div>
+      )}
     </div>
   </div>
 </section>
