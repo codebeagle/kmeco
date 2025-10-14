@@ -1,3 +1,28 @@
+---
+const {componentData} = Astro.props
+---
 <section>
-  <p>sbs collage</p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="{componentData.imageLarge.src}" alt="{componentData.imageLarge.altText}">
+        <img src="{componentData.imageSmall.src}" alt="{componentData.imageSmall.altText}">
+        <div class="stat">
+          <p class="number">{componentData.stat.number}</p>
+          <p>{componentData.stat.label}</p>
+        </div>
+      </div>
+      <div class="col">
+        <p set:html={componentData.eyebrow} class="eyebrow"></p>
+        <h2 set:html={componentData.heading}></h2>
+        <div set:html={componentData.content}  class="content"></div>
+        <ul>
+          {componentData.list.map((item:string) => 
+            <li>item</li>
+          )}
+        </ul>
+      </div>
+      <a href={componentData.cta.ctaHref}>{componentData.cta.ctaLabel}</a>
+    </div>
+  </div>
 </section>

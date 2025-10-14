@@ -1,10 +1,63 @@
 ---
 import Default from '../../layouts/Default.astro';
 import BannerPage from '../../components/BannerPage.astro';
+import SideBySideFloating from '../../components/SideBySideFloating.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
+
+const bannerData = {
+  title: 'KMECO Projects'
+}
+
+const sbsFloatingData = {
+  eyebrow: 'Featured project',
+  heading: 'Sample Wiring Project',
+  content: '<p>This will be the feature project description and should be about 3 sentences in length. This will be the feature project description and should be about 3 sentences in length. This will be the feature project description and should be about 3 sentences in length.</p>',
+  ctaLink: '/projects/project-1',
+  ctaLabel: 'View Project',
+  image: {
+    src: 'https://placehold.co/770x560',
+    altText: ''
+  }
+}
+
+const galleryProjectsData = {
+  projects: [
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Project Name'
+    }
+  ]
+}
 ---
 
 <Default>
-  <BannerPage title="Projects Page"></BannerPage>
-  <GalleryProjects></GalleryProjects>
+  <BannerPage componentData={bannerData}></BannerPage>
+  <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
+  <GalleryProjects componentData={galleryProjectsData}></GalleryProjects>
 </Default>

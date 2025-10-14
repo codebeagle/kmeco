@@ -1,17 +1,26 @@
 ---
 import Default from './Default.astro';
+import BannerArticle from '../components/BannerArticle.astro';
 
 const { frontmatter } = Astro.props;
-
 ---
 
 <Default {frontmatter}>
+	<BannerArticle componentData={frontmatter.bannerData}></BannerArticle>
+	
 	<section>
-		<h1>{frontmatter.title}</h1>
-		<p>Author: {frontmatter.author}</p>
-		<img src="" alt="">
-	</section>
-	<section>
-		<slot />
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<slot />
+				</div>
+				<div class="col">
+					<figure>
+						<img src={frontmatter.contentGeneralData.image.src} alt={frontmatter.contentGeneralData.image.altText}>
+						<figcaption>{frontmatter.contentGeneralData.image.caption}</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
 	</section>
 </Default>

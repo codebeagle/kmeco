@@ -7,14 +7,89 @@ import Statistics from '../components/Statistics.astro';
 import ContentText2Col from '../components/ContentText2Col.astro';
 import Video from '../components/Video.astro';
 import ComboStandard from '../components/ComboStandard.astro';
+
+const bannerData = {
+  title: 'Why KMECO?'
+}
+
+const sbsFloatingData = {
+  eyebrow: 'trust and experience',
+  heading: 'Partner with KMECO and see why others have trusted our service for over 40 years.',
+  content: '<p>Lorem ipsum dolor sit amet consectetur. Vitae viverra dui lacinia fermentum in est lacus. Sed euismod sed nam scelerisque venenatis. Malesuada dignissim vitae libero massa proin mauris mus ultricies pellentesque. Eu cursus fermentum eu ac enim lorem commodo. Imperdiet a maecenas nec interdum in aliquet sed turpis.</p>',
+  image: {
+    src: 'https://placehold.co/770x560',
+    altText: ''
+  }
+}
+
+const textListData = {
+  content: 'Lorem ipsum dolor sit amet consectetur. Vitae viverra dui lacinia fermentum in est lacus. Sed euismod sed nam scelerisque venenatis. Malesuada dignissim vitae libero massa proin mauris mus ultricies pellentesque. Eu cursus fermentum eu ac enim lorem commodo. Imperdiet a maecenas nec interdum in aliquet sed turpis. Semper pretium eget pellentesque elementum viverra tempor blandit. Viverra lorem in sit sit amet sit mauris. Tincidunt diam pulvinar a turpis. Felis sapien vulputate magna mus sem diam at dui aliquet. Aliquam leo enim vitae ultrices fermentum.',
+  list: [
+    'KMECO is committed to doing the job right',
+    'We pride ourselves on being ethical in pricing and communicating with our clients',
+    'Our values keep up clean cut and free of tobacco, alcohol, and drug use'
+  ]
+}
+
+const statisticsData = {
+  eyebrow: 'company statistics',
+  heading: 'Proven experience by the numbers.',
+  content: 'The numbers don\'t lie. KMECO has the experience and team to get your project done right.',
+  stats: [
+    {
+      value: '222',
+      label: 'Cool Tools'
+    },
+    {
+      value: '15',
+      label: 'Techs'
+    },
+    {
+      value: '40+',
+      label: 'Years Experience'
+    }
+  ]
+}
+
+const text2ColData = {
+  content: '<p>Lorem ipsum dolor sit amet consectetur. Vitae viverra dui lacinia fermentum in est lacus. Sed euismod sed nam scelerisque venenatis. Malesuada dignissim vitae libero massa proin mauris mus ultricies pellentesque. Eu cursus fermentum eu ac enim lorem commodo. Imperdiet a maecenas nec interdum in aliquet sed turpis. Semper pretium eget pellentesque elementum viverra tempor blandit. Viverra lorem in sit sit amet sit mauris. Tincidunt diam pulvinar a turpis. Felis sapien vulputate magna mus sem diam at dui aliquet. Aliquam leo enim vitae ultrices fermentum.</p><p>Lorem ipsum dolor sit amet consectetur. Tortor fames viverra nec facilisi. Urna praesent rutrum ipsum in gravida. Justo ac vel sed fringilla. Placerat vivamus faucibus ut neque imperdiet purus ut. Morbi aliquet egestas aliquet cursus dapibus cras at eget. Volutpat potenti placerat turpis elementum quam. Dignissim tortor cursus integer gravida. Feugiat vitae nec in suscipit donec tellus facilisis. Et enim vestibulum quam pellentesque mauris amet. Commodo dui sed eleifend accumsan aliquam odio.</p>'
+}
+
+const videoData = {
+  videoID: 'u1KC9ssyNUk'
+}
+
+const comboStandardData = {
+  eyebrow: 'mission and values',
+  heading: 'What We Value',
+  caption: 'At KMECO, we’re more than just an electrical company. We’re a family built on values integrity and hard-work.',
+  keyPoints: [
+    {
+      heading: 'Integrity in All We Do',
+      content: 'Lorem ipsum dolor sit amet consectetur. Nisi arcu est rutrum consectetur. Mi placerat malesuada massa phasellus mauris facilisis aliquam aliquam gravida.'
+    },
+    {
+      heading: 'Hard Work',
+      content: 'Lorem ipsum dolor sit amet consectetur. Nisi arcu est rutrum consectetur. Mi placerat malesuada massa phasellus mauris facilisis aliquam aliquam gravida.'
+    }
+  ],
+  imageLeft: {
+    src: 'https://placehold.co/425x400',
+    altText: ''
+  },
+  imageRight: {
+    src: 'https://placehold.co/425x400',
+    altText: ''
+  }
+}
 ---
 
 <Default>
-  <BannerPage></BannerPage>
-  <SideBySideFloating></SideBySideFloating>
-  <ContentTextList></ContentTextList>
-  <Statistics></Statistics>
-  <ContentText2Col></ContentText2Col>
-  <Video></Video>
-  <ComboStandard></ComboStandard>
+  <BannerPage componentData={bannerData}></BannerPage>
+  <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
+  <ContentTextList componentData={textListData}></ContentTextList>
+  <Statistics componentData={statisticsData}></Statistics>
+  <ContentText2Col componentData={text2ColData}></ContentText2Col>
+  <Video componentData={videoData}></Video>
+  <ComboStandard componentData={comboStandardData}></ComboStandard>
 </Default>

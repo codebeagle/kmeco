@@ -1,3 +1,11 @@
+---
+const { componentData } = Astro.props;
+---
 <section>
-  <p>Banner article</p>
+  <p>{componentData.title}</p>
+  <nav>
+    <a href="">Parent</a>
+    <a href="">Child</a>
+  </nav>
+  <img src={componentData.image.src} alt={componentData.image.altText}>
 </section>

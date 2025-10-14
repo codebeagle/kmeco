@@ -1,3 +1,16 @@
+---
+const {componentData} = Astro.props;
+---
 <section>
-  <p>General Content</p>
+  <div class="container">
+    <div class="row">
+      <div set:html={componentData.content} class="col"></div>
+      <div class="col">
+        <figure>
+          <img src={componentData.image.src} alt={componentData.image.altText}>
+          <figcaption>{componentData.image.caption}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
 </section>

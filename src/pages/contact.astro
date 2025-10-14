@@ -2,9 +2,55 @@
 import Default from '../layouts/Default.astro';
 import ContactUs from '../components/Contact.astro';
 import FAQ from '../components/FAQ.astro';
+
+const contactData = {
+  eyebrow: 'Send us a message',
+  heading: 'Drop Us a Line!',
+  content: 'Lorem ipsum dolor sit amet consectetur. Odio mattis commodo sem morbi nunc. Duis nunc libero id elementum amet tellus arcu metus enim. Hendrerit porttitor aliquam imperdiet egestas egestas sed mauris eu. Donec venenatis etiam dolor orci feugiat.',
+  instruction: 'Lorem ipsum dolor sit amet consectetur.',
+  icon: {
+    src: 'https://placehold.co/52x52',
+    altText: ''
+  }
+}
+
+const faqData = {
+  eyebrow: 'questions and answers',
+  heading: 'What Can We  Answer For You?',
+  image: {
+    src: 'https://placehold.co/586x400',
+    altText: ''
+  },
+  faq: [
+    {
+      heading: 'What are your project lead and turnaround times?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'Where should I send my RFP?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'What sort of insurance coverage do you have?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'What is your company\'s safety record?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'Is any of the electrical work being done by other contractors or trades?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'How does your company manage subcontractors?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    }
+  ]
+}
 ---
 
 <Default>
-  <ContactUs></ContactUs>
-  <FAQ></FAQ>
+  <ContactUs componentData={contactData}></ContactUs>
+  <FAQ componentData={faqData}></FAQ>
 </Default>

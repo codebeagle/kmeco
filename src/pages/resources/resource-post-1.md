@@ -1,16 +1,25 @@
 ---
 layout: '../../layouts/Resource.astro'
-title: Resource Post 1
+title: Post 1
 date: 2025-01-01
 author: Staff Writer
-image: {
-  src: "",
-  alt: ""
-}
+image: 
+  src: https://placehold.co/1600x600
+  alt: 
 excerpt: excerpt text
 description: description text
 draft: false
 category: how-to
+bannerData:
+  title: Resource Post 1
+  image:
+    src: https://placehold.co/1600x600
+    altText: 
+contentGeneralData:
+  image:
+    src: https://placehold.co/400x600
+    altText:
+    caption: Devin and Derrick serving in 'nam.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et nibh accumsan, fermentum leo non, vulputate lorem. Integer lacinia velit nec dui tristique bibendum. Etiam interdum lobortis lobortis. Donec bibendum aliquet ligula, ut congue sapien gravida vitae. Vivamus et risus quis lectus pulvinar venenatis in vitae lectus. Fusce lacinia metus in ex elementum, nec feugiat dolor viverra. Integer eget diam augue.

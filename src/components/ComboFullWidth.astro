@@ -1,3 +1,26 @@
+---
+const {componentData} = Astro.props;
+---
 <section>
-  <p>Combo Full Width</p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src={componentData.image.src} alt={componentData.image.altText}>
+        <div class="content-wrapper">
+          <p set:html={componentData.eyebrow} class="eyebrow"></p>
+          <h2 set:html={componentData.heading} ></h2>
+        </div>
+      </div>
+      <div class="col">
+        <div class="content-wrapper">
+          {componentData.keyPoints.map((point) => 
+            <div class="key-point">
+              <h3><img src={point.iconSrc} alt={point.iconAltText}> {point.heading}</h3>
+              <p>{point.content}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

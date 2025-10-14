@@ -1,3 +1,10 @@
+---
+const {componentData} = Astro.props;
+---
 <section>
-  <p>Content Text 2 Col</p>
+  <div class="container">
+    <div class="row">
+      <div set:html={componentData.content} ="col"></div>
+    </div>
+  </div>
 </section>

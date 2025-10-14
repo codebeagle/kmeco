@@ -3,10 +3,84 @@ import Default from '../../layouts/Default.astro';
 import BannerPage from '../../components/BannerPage.astro';
 import Blog from '../../components/Blog.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
+
+const bannerData = {
+  title: 'Resources'
+}
+
+const blogData = {
+  assets: [
+    {
+      type: 'Information',
+      data: 'Dec 19',
+      title: 'What is SCADA and Why Does It Matter',
+      ctaLink: '/resources/resource-post-1',
+      image: {
+        src: 'https://placehold.co/440x400',
+        altText: ''
+      }
+    },
+    {
+      type: 'How-to',
+      data: 'Jan 22',
+      title: 'The Master Electrician\'s Guide to Maintaining Your Heavy Equipment',
+      ctaLink: '/resources/resource-post-2',
+      image: {
+        src: 'https://placehold.co/440x400',
+        altText: ''
+      }
+    },
+    {
+      type: 'Product Guide',
+      data: 'Feb 12',
+      title: 'Choosing the Right Home Backup Generator',
+      ctaLink: '/resources/resource-post-3',
+      image: {
+        src: 'https://placehold.co/440x400',
+        altText: ''
+      }
+    }
+  ]
+}
+
+const galleryProjectsData = {
+  projects: [
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    },
+    {
+      imageSrc: 'https://placehold.co/440x400',
+      imageAlt: '',
+      title: 'Asset Heading'
+    }
+  ]
+}
 ---
 
 <Default>
-  <BannerPage></BannerPage>
-  <Blog></Blog>
-  <GalleryProjects></GalleryProjects>
+  <BannerPage componentData={bannerData}></BannerPage>
+  <Blog componentData={blogData}></Blog>
+  <GalleryProjects componentData={galleryProjectsData}></GalleryProjects>
 </Default>

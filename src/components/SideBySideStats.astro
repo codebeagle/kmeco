@@ -1,3 +1,27 @@
+---
+const {componentData} = Astro.props;
+---
 <section>
-  <p>sbs stats</p>
+  <div class="containter">
+    <div class="row">
+      <div class="col">
+        <img src={componentData.image.src} alt={componentData.image.altText}>
+      </div>
+      <div class="col">
+        <div class="content-wrapper">
+          <p set:html={componentData.eyebrow} class="eyebrow"></p>
+          <h2 set:html={componentData.heading}></h2>
+          <div set:html={componentData.content} class="content"></div>
+        </div>
+        <div class="stats-wrapper">
+          {componentData.stats.map((stat) => 
+            <div class="stat-block">
+              <p class="value">{stat.value}</p>
+              <p>{stat.label}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

@@ -3,15 +3,166 @@ import Default from '../layouts/Default.astro';
 import Hero from '../components/Hero.astro';
 import Collage from '../components/SideBySideCollage.astro';
 import FullWidth from '../components/ComboFullWidth.astro';
-import Standard from '../components/ComboStandard.astro';
+import ComboStandard from '../components/ComboStandard.astro';
 import FAQ from '../components/FAQ.astro';
+
+const heroData = {
+  eyebrow: 'professional electrical services',
+  heading: 'Service you <br>can trust.',
+  content: 'For over 40 years we have delivered superior customer support and professional electrician services to those in Central Utah and beyond. Learn why people choose to work with KMECO below.',
+  cta: {
+    ctaLabel: 'Why KMECO?',
+    ctaHref: '/why-kmeco'  
+  },
+  cards: [
+    {
+      cardHeading: 'Experts in SCADA',
+      cardContent: 'We know our stuff when it comes to industrial control  and data systems  using SCADA technology and best practices.'
+    },
+    {
+      cardHeading: 'Full equipment lineup',
+      cardContent: 'We have bucket trucks, a crane, a mini excavator and all the tools needed to get your project done the right way.' 
+    },
+    {
+      cardHeading: 'Family owned & operated',
+      cardContent: 'KMECO was founded in Elsinore, UT and family owned and operated since 19##. When you call KMECO, we answer.'
+    },
+    {
+      cardHeading: 'Licensed & certified',
+      cardContent: 'We’re fully insured  and licensed as Electrical Contractors and Master Electricians.'
+    }
+  ]
+};
+
+const sbsCollageData = {
+  eyebrow: 'What we offer',
+  heading: 'Professional commercial electrical services and systems',
+  content: 'Your project is too important to be left to just anyone, which is why we think you’ll love what we have to offer.',
+  list: [
+    'Industrial Electrical: Water & Sewer SCADA, pumps, motor controls, soft start, VED, Wireless I/O, repairs',
+    'Commercial Electrical: Design and layout, service entrance, panels, feeders, branch circuts, lights.',
+    'Closed Circut TV: Design, installation, hardware',
+    'Emergency Power: Home backup generators',
+    'Even custom work! Call us with your project details.'
+  ],
+  cta: {
+    ctaLabel: 'See Our Work',
+    ctaHref: '/projects'
+  },
+  imageLarge: {
+    src: 'https://placehold.co/630x390',
+    alt: ''
+  },
+  imageSmall: {
+    src: 'https://placehold.co/460x300',
+    alt: ''
+  },
+  stat: {
+    number: '##+',
+    label: 'Completed'
+  }
+}
+
+const comboFullWidthData = {
+  eyebrow: 'Why KMECO?',
+  heading: 'Why choose KMECO for your project?',
+  image: {
+    src: 'https://placehold.co/1200x800',
+    altText: ''
+  },
+  keyPoints: [
+    {
+      iconSrc: '',
+      iconAltText: '',
+      heading: 'Excellent Safety Record',
+      content: 'Lorem ipsum dolor sit amet consectetur. Quis commodo viverra faucibus cras condimentum sodales.'
+    },
+    {
+      iconSrc: '',
+      iconAltText: '',
+      heading: 'Ethical Pricing and Practice',
+      content: 'Lorem ipsum dolor sit amet consectetur. Orci mi sed amet amet proin aliquam.'
+    },
+    {
+      iconSrc: '',
+      iconAltText: '',
+      heading: 'Master Level Services',
+      content: 'Lorem ipsum dolor sit amet consectetur. Praesent convallis ut faucibus amet neque faucibus quis.'
+    },
+    {
+      iconSrc: '',
+      iconAltText: '',
+      heading: 'Reliable Communication',
+      content: 'Lorem ipsum dolor sit amet consectetur. Augue quis tortor dolor feugiat libero nec imperdiet.'
+    }
+  ]
+}
+
+const comboStandardData = {
+  eyebrow: 'family Owned and Operated',
+  heading: 'Over 40 years of trust.',
+  caption: 'Founded by Kevin Moore of Elsinore, Utah in 19##',
+  keyPoints: [
+    {
+      heading: 'Strong family values',
+      content: 'We work hard and keep our business clean and honest. Expect the best when working with us. Read our story to get to know us even better.'
+    },
+    {
+      heading: 'Easy-to-work-with techs',
+      content: 'We love what we do and have a tight-knit team of techs with a focus on service.'
+    }
+  ],
+  imageLeft: {
+    src: 'https://placehold.co/425x400',
+    altText: ''
+  },
+  imageRight: {
+    src: 'https://placehold.co/425x400',
+    altText: ''
+  }
+}
+
+const faqData = {
+  eyebrow: 'questions and answers',
+  heading: 'What Can We  Answer For You?',
+  image: {
+    src: 'https://placehold.co/586x400',
+    altText: ''
+  },
+  faq: [
+    {
+      heading: 'What are your project lead and turnaround times?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'Where should I send my RFP?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'What sort of insurance coverage do you have?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'What is your company\'s safety record?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'Is any of the electrical work being done by other contractors or trades?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    },
+    {
+      heading: 'How does your company manage subcontractors?',
+      content: 'Lorem ipsum dolor sit amet consectetur. Diam egestas arcu sit duis nulla nisl massa aliquet lectus. Sed habitasse a a quisque proin consequat ultrices.'
+    }
+  ]
+}
 ---
 
 <Default>
   <h1>Test</h1>
-  <Hero></Hero>
-  <Collage></Collage>
-  <FullWidth></FullWidth>
-  <Standard></Standard>
-  <FAQ></FAQ>
+  <Hero componentData={heroData} />
+  <Collage componentData={sbsCollageData}></Collage>
+  <FullWidth componentData={comboFullWidthData}></FullWidth>
+  <ComboStandard componentData={comboStandardData}></ComboStandard>
+  <FAQ componentData={faqData}></FAQ>
 </Default>

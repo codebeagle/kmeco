@@ -1,6 +1,6 @@
 ---
-const { title = "no title" } = Astro.props;
+const { componentData } = Astro.props;
 ---
 <section>
-  <p>{title}</p>
+  <p>{componentData.title}</p>
 </section>

@@ -1,3 +1,14 @@
+---
+const {componentData} = Astro.props;
+---
 <section>
-  <p>Image Gallery</p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {componentData.images.map((image) => 
+          <img src={image.src} alt={image.altText}>
+        )}
+      </div>
+    </div>
+  </div>
 </section>
