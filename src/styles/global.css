@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+
+  --color-red: #EB1C25;
+  --color-white: #FFFFFF;
+  --color-black: #030303;
+  --color-dark-100: #EDEDED;
+  --color-dark-200: #D2D2D2;
+  --color-dark-400: #929292;
+  --color-dark-600: #4A4A4A;
+  --color-dark-800: #1E1E1E;
+
+  --font-display: 'Barlow', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+.heading-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 90%;
+}
+
+.heading-100 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 115%;
+}
+
+.heading-200 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 125%;
+}
+
+.heading-300 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 125%;
+}
+
+.heading-400 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+}
+
+.heading-500 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 150%;
+}
+
+.heading-600 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 125%;
+}
+
+a, p, li, label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+p.small {
+  font-size: 15px;
+}
+
+p.extra-small {
+  font-size: 13px;
+}
+
+.eyebrow {
+  font-size: 22px;
+  letter-spacing: 10%;
+}

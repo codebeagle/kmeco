@@ -7,7 +7,7 @@ const { componentData } = Astro.props;
     <div class="row">
       <div class="col">
         <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h1 set:html={componentData.heading}></h1>
+        <h1 set:html={componentData.heading} class="heading-display"></h1>
       </div>
       <div class="col">
         <p set:html={componentData.content}></p>
@@ -17,7 +17,7 @@ const { componentData } = Astro.props;
     <div class="row">
       {componentData.cards.map((card) => 
         <div class="card">
-          <h3>{card.cardHeading}</h3>
+          <h3 class="heading-300">{card.cardHeading}</h3>
           <p>{card.cardContent}</p>
         </div>
       )}
