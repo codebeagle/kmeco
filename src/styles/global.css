@@ -17,11 +17,18 @@
   --font-body: 'Montserrat', sans-serif;
 }
 
+@font-face {
+  font-family: 'Barlow';
+
+}
+
 .heading-display {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 96px;
   line-height: 90%;
+  text-transform: uppercase;
+  letter-spacing: -5px;
 }
 
 .heading-100 {
