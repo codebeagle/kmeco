@@ -1,25 +1,21 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="content-wrapper">
-          <h3><img src={componentData.icon.src} alt={componentData.icon.altText}>{componentData.instruction}</h3>
-          <div class="form-wrapper">
-            <iframe data-tally-src="https://tally.so/embed/mDlqJj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form
-"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-          </div>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <div class="content-wrapper">
+        <h3 class="heading-600"><img src={componentData.icon.src} alt={componentData.icon.altText}>{componentData.instruction}</h3>
+        <div class="form-wrapper">
+          <iframe data-tally-src="https://tally.so/embed/mDlqJj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
         </div>
       </div>
-      <div class="col">
-        <div class="content-wrapper">
-          <p set:html={componentData.eyebrow} class="eyebrow"></p>
-          <h2 set:html={componentData.heading}></h2>
-          {componentData.content}
-        </div>
+    </div>
+    <div class="col">
+      <div class="content-wrapper">
+        <p set:html={componentData.eyebrow} class="eyebrow"></p>
+        <h2 set:html={componentData.heading} class="heading-200"></h2>
+        {componentData.content}
       </div>
     </div>
   </div>

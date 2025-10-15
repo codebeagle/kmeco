@@ -2,5 +2,11 @@
 const { componentData } = Astro.props;
 ---
 <section>
-  <h2 class="heading-100">{componentData.title}</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="heading-100">{componentData.title}</h2>
+      </div>
+    </div>
+  </div>
 </section>

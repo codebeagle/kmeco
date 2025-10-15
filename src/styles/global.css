@@ -19,7 +19,17 @@
 
 @font-face {
   font-family: 'Barlow';
+  src: url('/fonts/Barlow-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
 }
 
 .heading-display {
@@ -28,26 +38,26 @@
   font-size: 96px;
   line-height: 90%;
   text-transform: uppercase;
-  letter-spacing: -5px;
+  letter-spacing: -10%;
 }
 
 .heading-100 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 54px;
   line-height: 115%;
 }
 
 .heading-200 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 44px;
   line-height: 125%;
 }
 
 .heading-300 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 38px;
   line-height: 125%;
 }
@@ -91,4 +101,25 @@ p.extra-small {
 .eyebrow {
   font-size: 22px;
   letter-spacing: 10%;
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+@layer components {
+  
 }

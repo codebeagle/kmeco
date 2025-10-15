@@ -2,25 +2,23 @@
 const { componentData } = Astro.props;
 ---
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h1 set:html={componentData.heading} class="heading-display"></h1>
-      </div>
-      <div class="col">
-        <p set:html={componentData.content}></p>
-        <a href={componentData.cta.ctaHref}>{componentData.cta.ctaLabel}</a>
-      </div>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <p set:html={componentData.eyebrow} class="eyebrow"></p>
+      <h1 set:html={componentData.heading} class="heading-display"></h1>
     </div>
-    <div class="row">
-      {componentData.cards.map((card) => 
-        <div class="card">
-          <h3 class="heading-300">{card.cardHeading}</h3>
-          <p>{card.cardContent}</p>
-        </div>
-      )}
+    <div class="col">
+      <p set:html={componentData.content}></p>
+      <a href={componentData.cta.ctaHref}>{componentData.cta.ctaLabel}</a>
     </div>
+  </div>
+  <div class="row">
+    {componentData.cards.map((card) => 
+      <div class="card">
+        <h3 class="heading-300">{card.cardHeading}</h3>
+        <p>{card.cardContent}</p>
+      </div>
+    )}
   </div>
 </section>

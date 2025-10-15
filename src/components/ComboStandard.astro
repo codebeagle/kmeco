@@ -1,22 +1,22 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
+<section class="block">
   <div class="container">
-    <div class="row">
+    <div class="flex">
       <div class="col">
         <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h2 set:html={componentData.heading}></h2>
+        <h2 set:html={componentData.heading} class="heading-200"></h2>
       </div>
       <div class="col">
         <p>{componentData.caption}</p>
       </div>
     </div>
-    <div class="row">
+    <div class="flex">
       <div class="col">
         {componentData.keyPoints.map((point) => 
           <div class="key-point">
-            <h3>{point.heading}</h3>
+            <h3 class="heading-300">{point.heading}</h3>
             <hr>
             <p>{point.content}</p>
           </div>

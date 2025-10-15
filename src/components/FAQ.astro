@@ -1,24 +1,22 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h2 set:html={componentData.heading}></h2>
-        <img src={componentData.image.src} alt={componentData.image.altText}>
-      </div>
-      <div class="col">
-        <ul class="faq">
-          {componentData.faq.map((item) => 
-            <div class="faq-item">
-              <h3>{item.heading}</h3>
-              <div set:html={item.content}></div>
-            </div>
-          )}
-        </ul>
-      </div>
+<section class="container">
+  <div class="flex">
+    <div class="col">
+      <p set:html={componentData.eyebrow} class="eyebrow"></p>
+      <h2 set:html={componentData.heading} class="heading-200"></h2>
+      <img src={componentData.image.src} alt={componentData.image.altText}>
+    </div>
+    <div class="col">
+      <ul class="faq">
+        {componentData.faq.map((item) => 
+          <div class="faq-item">
+            <h3 class="heading-500">{item.heading}</h3>
+            <div set:html={item.content}></div>
+          </div>
+        )}
+      </ul>
     </div>
   </div>
 </section>

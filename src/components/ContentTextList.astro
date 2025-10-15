@@ -1,15 +1,13 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div set:html={componentData.content} ="col"></div>
-      <ul class="list">
-        {componentData.list.map((item) => 
-          <li>{item}</li>
-        )}
-      </ul>
-    </div>
+<section class="container">
+  <div class="row">
+    <div set:html={componentData.content} ="col"></div>
+    <ul class="list">
+      {componentData.list.map((item) => 
+        <li>{item}</li>
+      )}
+    </ul>
   </div>
 </section>

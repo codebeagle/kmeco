@@ -1,17 +1,15 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        {componentData.projects.map((project) => 
-          <div class="card">
-            <img src={project.imageSrc} alt={project.altText}>
-            <h3>{project.title}</h3>
-          </div>
-        )}
-      </div>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      {componentData.projects.map((project) => 
+        <div class="card">
+          <img src={project.imageSrc} alt={project.altText}>
+          <h3 class="heading-600">{project.title}</h3>
+        </div>
+      )}
     </div>
   </div>
 </section>

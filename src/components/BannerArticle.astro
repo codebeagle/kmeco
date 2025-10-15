@@ -2,10 +2,16 @@
 const { componentData } = Astro.props;
 ---
 <section>
-  <h2 class="heading-100">{componentData.title}</h2>
-  <nav>
-    <a href="">Parent</a>
-    <a href="">Child</a>
-  </nav>
-  <img src={componentData.image.src} alt={componentData.image.altText}>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="heading-100">{componentData.title}</h2>
+        <nav>
+          <a href="">Parent</a>
+          <a href="">Child</a>
+        </nav>
+        <img src={componentData.image.src} alt={componentData.image.altText}>
+      </div>
+    </div>
+  </div>
 </section>

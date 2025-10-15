@@ -1,22 +1,20 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h2 set:html={componentData.heading}></h2>
-        <p set:html={componentData.content}></p>
-      </div>
-      <div class="col">
-        {componentData.stats.map((item) => 
-          <div class="stat-block">
-            <p class="value">{item.value}</p>
-            <p>{item.label}</p>
-          </div>
-        )}
-      </div>
+<section class="container">
+  <div class="flex">
+    <div class="col">
+      <p set:html={componentData.eyebrow} class="eyebrow"></p>
+      <h2 set:html={componentData.heading} class="heading-200"></h2>
+      <p set:html={componentData.content}></p>
+    </div>
+    <div class="col">
+      {componentData.stats.map((item) => 
+        <div class="stat-block">
+          <p class="value heading-400">{item.value}</p>
+          <p>{item.label}</p>
+        </div>
+      )}
     </div>
   </div>
 </section>
