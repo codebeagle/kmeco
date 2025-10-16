@@ -1,31 +1,30 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section class="block">
-  <div class="container">
-    <div class="flex">
-      <div class="col">
-        <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h2 set:html={componentData.heading} class="heading-200"></h2>
-      </div>
-      <div class="col">
-        <p>{componentData.caption}</p>
-      </div>
+<section class="container">
+  <div class="flex items-end justify-between mb-10">
+    <div class="flex flex-col">
+      <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
+      <h2 set:html={componentData.heading} class="heading-200"></h2>
     </div>
-    <div class="flex">
-      <div class="col">
-        {componentData.keyPoints.map((point) => 
-          <div class="key-point">
-            <h3 class="heading-300">{point.heading}</h3>
-            <hr>
-            <p>{point.content}</p>
-          </div>
-        )}
-      </div>
-      <div class="col">
-        <img src={componentData.imageLeft.src} alt={componentData.imageLeft.altText}>
-        <img src={componentData.imageRight.src} alt={componentData.imageLeft.altText}>
-      </div>
+    <p class="text-right">{componentData.caption}</p>
+  </div>
+  <div class="flex">
+    <div class="col">
+      {componentData.keyPoints.map((point) => 
+        <div class="key-point">
+          <h3 class="heading-300">{point.heading}</h3>
+          <hr>
+          <p>{point.content}</p>
+        </div>
+      )}
+    </div>
+    <div class="col">
+      <img src={componentData.imageLeft.src} alt={componentData.imageLeft.altText}>
+      <img src={componentData.imageRight.src} alt={componentData.imageLeft.altText}>
     </div>
   </div>
 </section>
