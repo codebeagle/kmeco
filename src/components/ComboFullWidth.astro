@@ -1,21 +1,24 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section>
-  <div class="container">
-    <div class="flex">
-      <div class="col">
-        <img src={componentData.image.src} alt={componentData.image.altText}>
-        <div class="content-wrapper">
-          <p set:html={componentData.eyebrow} class="eyebrow"></p>
-          <h2 set:html={componentData.heading} class="heading-200"></h2>
-        </div>
+<section class="w-full relative bg-dark-800 py-25">
+  <div class="absolute top-0 left-0 h-full z-0 w-[50vw] overflow-hidden">
+    <Picture class="object-cover min-h-full max-h-full" src={images[componentData.image.src]()} formats={['avif','webp']} alt="simple KMECO logo" />
+  </div>
+  <div class="relative container mx-auto z-1">
+    <div class="grid grid-cols-12 gap-5">
+      <div class="col-span-5 text-white">
+        <p set:html={componentData.eyebrow} class="eyebrow"></p>
+        <h2 set:html={componentData.heading} class="heading-200"></h2>
       </div>
-      <div class="col">
-        <div class="content-wrapper">
+      <div class="col-start-8 col-span-4 text-white">
+        <div class="flex flex-col gap-6">
           {componentData.keyPoints.map((point) => 
             <div class="key-point">
-              <h3 class="heading-300"><img src={point.iconSrc} alt={point.iconAltText}> {point.heading}</h3>
+              <h3 class="heading-400"><img src={point.iconSrc} alt={point.iconAltText}> {point.heading}</h3>
               <p>{point.content}</p>
             </div>
           )}

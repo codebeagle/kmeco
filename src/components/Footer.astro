@@ -1,50 +1,48 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h4>Let's get it done right.</h4>
+---
+import { Picture } from 'astro:assets';
+import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
+---
+<footer class="container flex flex-col px-10 pt-32 pb-10 bg-dark-800 rounded-xl text-white mb-10">
+  <div class="flex flex-row justify-between">
+    <h4 class="heading-400">Let's get it done right.</h4>
+    <a href="">Send a message</a>
+  </div>
+  <div class="flex mt-32">
+    <div class="flex flex-col flex-1 gap-3">
+      <Picture src={imgKmecoLogo} formats={['avif','webp']} alt="simple KMECO logo" />
+      <p>Trusted for over 40 years to deliver the best in electrical services in Central Utah.</p>
+      <nav class="flex gap-4 mt-5">
+        <a href="/home">home</a>
+        <a href="/projects">projects</a>
+        <a href="/why-kmeco">why kmeco?</a>
+        <a href="/our-story">our story</a>
+        <a href="resources">resources</a>
+        <a href="/contact">contact</a>
+      </nav>
+    </div>
+    <div class="grid grid-cols-2 gap-5 w-[678px]">
+      <div class="block">
+        <p class="small text-dark-400">Phone number</p>
+        <p>+1 435-527-3866</p>
       </div>
-      <div class="col">
-        <a href="">Send a message</a>
+      <div class="block">
+        <p class="small text-dark-400">Office Hours</p>
+        <p>Mon - Fri</p>
+        <p>8:00 AM – 5:00 PM</p>
+      </div>
+      <div class="block">
+        <p class="small text-dark-400">Email Address</p>
+        <p>info@kmecoutah.com</p>
+      </div>
+      <div class="block">
+        <p class="small text-dark-400">Office Address</p>
+        <p>80 North 100 West</p>
+        <p>P.O. Box #256</p>
+        <p>Elsinore, UT, 84724</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <img src="" alt="KMECO logo">
-        <p>Trusted for over 40 years to deliver the best in electrical services in Central Utah.</p>
-        <nav>
-          <a href="/home">home</a>
-          <a href="/projects">projects</a>
-          <a href="/why-kmeco">why kmeco?</a>
-          <a href="/our-story">our story</a>
-          <a href="resources">resources</a>
-          <a href="/contact">contact</a>
-        </nav>
-      </div>
-      <div class="col">
-        <div class="block">
-          <p>Phone number</p>
-          <p>+1 435-527-3866</p>
-        </div>
-        <div class="block">
-          <p>Office Hours</p>
-          <p>Mon - Fri</p>
-          <p>8:00 AM – 5:00 PM</p>
-        </div>
-        <div class="block">
-          <p>Email Address</p>
-          <p>info@kmecoutah.com</p>
-        </div>
-        <div class="block">
-          <p>Office Address</p>
-          <p>80 North 100 West</p>
-          <p>P.O. Box #256</p>
-          <p>Elsinore, UT, 84724</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <p>© Copyright 2025 - Kevin Moore Electric Company Inc.</p>
-    </div>
+  </div>
+  <div class="row mt-10">
+    <p class="small text-dark-400">© Copyright 2025 - Kevin Moore Electric Company Inc.</p>
   </div>
 </footer>

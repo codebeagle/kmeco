@@ -32,6 +32,10 @@
   font-display: swap;
 }
 
+html {
+  color: var(--color-dark-800);
+}
+
 .heading-display {
   font-family: var(--font-display);
   font-weight: 900;
@@ -81,6 +85,14 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 125%;
+}
+
+ul {
+  margin-left: 32px;
+}
+
+ul li::marker {
+  color: var(--color-red);
 }
 
 a, p, li, label {
