@@ -1,10 +1,10 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section class="container">
-  <div class="flex">
-    <div class="col">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/{componentdata.videoID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<section class="container my-15">
+  <div class="grid grid-cols-12">
+    <div class="col-start-2 col-span-10">
+      <iframe class="aspect-video w-full h-auto" width="560" height="315" src={componentData.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
 </section>

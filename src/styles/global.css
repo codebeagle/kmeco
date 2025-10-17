@@ -113,6 +113,7 @@ p.extra-small {
 .eyebrow {
   font-size: 22px;
   letter-spacing: 10%;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -132,6 +133,89 @@ a:active {
   text-decoration: underline;
 }
 
+a.link-card:link,
+a.link-card:visited,
+a.link-card:hover,
+a.link-card:active {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 @layer components {
-  
+  .content-general h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 115%;
+  }
+
+  .content-general h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 125%;
+  }
+
+  .content-general h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 125%;
+  }
+
+  .content-general h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+  .content-general h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+  }
+
+  .content-general h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 125%;
+  }
+
+  .content-general ul {
+    margin-left: 32px;
+  }
+
+  .content-general ul li::marker {
+    color: var(--color-red);
+  }
+
+  .content-general a,
+  .content-general p,
+  .content-general li,
+  .content-general label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 20px;
+  }
+
+  .content-general strong {
+    font-weight: 700;
+  }
+
+  .content-general em {
+    font-style: italic;
+  }
+
+  .content-general a:link,
+  .content-general a:visited,
+  .content-general a:hover,
+  .content-general a:active {
+    color: var(--color-red);
+    text-decoration: underline;
+  }
 }

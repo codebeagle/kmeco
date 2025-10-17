@@ -1,12 +1,10 @@
 ---
 const { componentData } = Astro.props;
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2 class="heading-100">{componentData.title}</h2>
-      </div>
+<section class="w-full bg-dark-100 py-15">
+  <div class="container mx-auto grid grid-cols-12 gap-5">
+    <div class="col-start-2 col-span-10">
+      <h2 class="heading-100">{componentData.title}</h2>
     </div>
   </div>
 </section>

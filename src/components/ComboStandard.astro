@@ -4,27 +4,25 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="container">
-  <div class="flex items-end justify-between mb-10">
-    <div class="flex flex-col">
+<section class="container grid grid-cols-12 gap-5 py-15">
+  <div class="col-start-2 col-span-10 row-span-1 flex items-end justify-between mb-15">
+    <div class="flex flex-col w-150">
       <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
       <h2 set:html={componentData.heading} class="heading-200"></h2>
     </div>
-    <p class="text-right">{componentData.caption}</p>
+    <p class="text-right w-130">{componentData.caption}</p>
   </div>
-  <div class="flex">
-    <div class="col">
-      {componentData.keyPoints.map((point) => 
-        <div class="key-point">
-          <h3 class="heading-300">{point.heading}</h3>
-          <hr>
-          <p>{point.content}</p>
-        </div>
-      )}
-    </div>
-    <div class="col">
-      <img src={componentData.imageLeft.src} alt={componentData.imageLeft.altText}>
-      <img src={componentData.imageRight.src} alt={componentData.imageLeft.altText}>
-    </div>
+  <div class="row-start-2 row-span-1 col-start-2 col-span-3 flex flex-col justify-end gap-10">
+    {componentData.keyPoints.map((point) => 
+      <div class="key-point">
+        <h3 class="heading-500">{point.heading}</h3>
+        <hr class="my-3 border-dark-200">
+        <p>{point.content}</p>
+      </div>
+    )}
   </div>
-</section>
+  <div class="row-start-2 row-span-1 col-start-6 col-span-6 h-100 flex gap-5 ml-15 items-stretch">
+    <Picture class="h-full flex-1 object-cover object-center rounded-xl" src={images[componentData.imageLeft.src]()} formats={['avif','webp']} alt="" />
+    <Picture class="h-full flex-1 object-cover object-center rounded-xl" src={images[componentData.imageRight.src]()} formats={['avif','webp']} alt="" />
+  </div>
+</section> 

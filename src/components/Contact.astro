@@ -1,21 +1,31 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section class="container">
-  <div class="row">
-    <div class="col">
-      <div class="content-wrapper">
-        <h3 class="heading-600"><img src={componentData.icon.src} alt={componentData.icon.altText}>{componentData.instruction}</h3>
-        <div class="form-wrapper">
-          <iframe data-tally-src="https://tally.so/embed/mDlqJj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+<section class="w-full relative bg-dark-800 py-25">
+  <div class="absolute top-0 left-0 z-0 h-full w-[50vw] bg-white"></div>
+  <div class="relative container mx-auto z-1">
+    <div class="grid grid-cols-12 gap-5">
+      <div class="col-span-5">
+        <div class="content-wrapper">
+          <div class="flex flex-row items-center">
+            <h3 class="heading-600">{componentData.instruction}</h3>
+          </div>
+          <div class="form-wrapper">
+            <iframe data-tally-src="https://tally.so/embed/mDlqJj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="content-wrapper">
-        <p set:html={componentData.eyebrow} class="eyebrow"></p>
-        <h2 set:html={componentData.heading} class="heading-200"></h2>
-        {componentData.content}
+      <div class="col-start-8 col-span-4 text-white flex flex-col justify-center">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col">
+            <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
+            <h2 set:html={componentData.heading} class="heading-200"></h2>
+          </div>
+          {componentData.content}
+        </div>
       </div>
     </div>
   </div>

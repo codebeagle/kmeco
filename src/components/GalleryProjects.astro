@@ -1,15 +1,21 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section class="container">
-  <div class="row">
-    <div class="col">
+<section class="bg-dark-100 w-full py-15">
+  <div class="container mx-auto grid grid-cols-12 gap-5">
+    <div class="col-start-2 col-span-10 grid grid-cols-3 gap-5">
       {componentData.projects.map((project) => 
-        <div class="card">
-          <img src={project.imageSrc} alt={project.altText}>
-          <h3 class="heading-600">{project.title}</h3>
+        <div class="flex flex-col gap-1">
+          <a href={project.link} class="group link-card relative h-[420px] flex flex-col justify-end p-8 rounded-xl overflow-hidden">
+            <Picture class="absolute top-0 left-0 w-full h-full z-[0] flex-1 object-cover object-center group-hover:scale-105 transition-transform ease-in-out duration-300" src={images[project.imageSrc]()} formats={['avif','webp']} alt="" />
+            <div class="absolute opacity-50 top-0 left-0 min-h-full min-w-full z-1 bg-linear-to-t from-black to-transparent"></div>
+            <h3 class="heading-600 z-1 relative ">{project.title}</h3>
+          </a>
         </div>
       )}
     </div>
   </div>
-</section>
+</section> 

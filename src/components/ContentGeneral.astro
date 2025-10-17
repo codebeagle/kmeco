@@ -1,14 +1,15 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section class="container">
-  <div class="row">
-    <div set:html={componentData.content}></div>
-    <div class="col">
-      <figure>
-        <img src={componentData.image.src} alt={componentData.image.altText}>
-        <figcaption>{componentData.image.caption}</figcaption>
+<section class="container grid grid-cols-12 gap-5 my-15">
+  <div set:html={componentData.content} class="col-start-2 col-span-6 content-general"></div>
+    <div class="col-start-9 col-span-3">
+      <figure class="relative p-4 flex flex-col h-[540px] justify-end">
+        <Picture class="absolute w-full z-[0] h-[540px] top-0 left-0 flex-1 object-cover object-center rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
+        <figcaption class="z-[1] bg-black/50 rounded-lg p-2 text-white text-center">{componentData.image.caption}</figcaption>
       </figure>
     </div>
-  </div>
 </section>

@@ -28,19 +28,19 @@ textListData:
     - Our values keep up clean cut and free of tobacco, alcohol, and drug use
 galleryImagesData:
   images:
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-1.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-2.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-3.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-4.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-5.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-6.jpg'
      altText: ''
-   - src: https://placehold.co/600x600
+   - src: '../images/project-1-gallery-7.jpg'
      altText: ''
 ---
 

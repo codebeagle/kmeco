@@ -1,19 +1,25 @@
 ---
+import { Picture } from 'astro:assets';
+
 const {componentData} = Astro.props;
+const images = import.meta.glob('../images/*');
 ---
-<section class="container">
-  <div class="row">
-    <div class="col flex">
-      {componentData.assets.map((asset) => 
-        <div class="card">
-          <div class="date">
-            <p>{asset.date}</p>
+<section class="container mx-auto grid grid-cols-12 gap-5 py-25">
+  <div class="col-start-2 col-span-10 flex flex-row gap-5">
+    {componentData.assets.map((asset) => 
+      <div class="group col-span-4 basis-1/3">
+        <a href={asset.link} class="group text-white link-card relative h-[420px] flex flex-col justify-end p-8 rounded-xl overflow-hidden">
+          <Picture class="absolute top-0 left-0 w-full h-full z-[0] flex-1 object-cover object-center group-hover:scale-105 transition-transform ease-in-out duration-300" src={images[asset.image.src]()} formats={['avif','webp']} alt="" />
+          <div class="absolute opacity-50 top-0 left-0 min-h-full min-w-full z-1 bg-linear-to-t from-black to-transparent"></div>
+          <div class="bg-red px-5 py-4 absolute top-0 left-8 z-[1] color-white">
+            <p set:html={asset.date} class="text-center"></p>
           </div>
-          <img src={asset.image.src} alt={asset.image.altText}>
-          <p class="type eyebrow">{asset.type}</p>
-          <h3 class="heading-600">{asset.title}</h3>
-        </div>
-      )}
-    </div>
+          <div class="z-[1]">
+            <p class="type eyebrow">{asset.type}</p>
+            <h3 class="heading-600">{asset.title}</h3>
+          </div>
+        </a>
+      </div>
+    )}
   </div>
 </section>
