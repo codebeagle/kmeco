@@ -17,7 +17,7 @@ bannerData:
     altText: 
 contentGeneralData:
   image:
-    src: https://placehold.co/400x600
+    src: '../images/resource-post-1-content.jpg'
     altText:
     caption: Devin and Derrick serving in 'nam.
 ---
