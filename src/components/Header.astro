@@ -2,14 +2,14 @@
 import { Picture } from 'astro:assets';
 import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
 ---
-<header class="flex w-full border-b border-dark-200">
-  <div class="flex items-center justify-center p-10"> 
+<header class="flex w-full border-b border-dark-200 overflow-hidden">
+  <div class="flex items-center justify-center p-3 lg:p-10"> 
     <a href="/">
       <Picture src={imgKmecoLogo} formats={['avif','webp']} alt="simple KMECO logo" />
     </a>
   </div>
   <div class="flex-1 flex flex-col border-x border-dark-200">
-    <div class="flex px-10 py-3 border-b border-dark-200 justify-between">
+    <div class="hidden xl:flex px-10 py-3 border-b border-dark-200 justify-between">
       <nav class="social">
         <a href="" class="w-32 h-32 rounded-full bg-dark-100 p-5">F</a>
         <a href="" class="w-32 h-32 rounded-full bg-dark-100 p-5">I</a>
@@ -20,7 +20,7 @@ import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
         <p class="small border-l border-dark-200 ml-3 pl-3">M-F: 8:00am - 5:00pm</p>
       </div>
     </div>
-    <div class="flex-1 flex items-center px-10 py-3">
+    <div class="hidden flex-1 xl:flex items-center px-10 py-3">
       <nav class="flex gap-4">
         <a href="/projects" class="uppercase">Projects</a>
         <a href="/why-kmeco" class="uppercase">Why KMECO?</a>
@@ -34,7 +34,7 @@ import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
   <div class="flex flex-col justify-center px-15 py-10">
     <div class="info-block">
       <p class="small color-dark-600">Office Number</p>
-      <p>*435) 527-3866</p>
+      <p>(435) 527-3866</p>
     </div>
   </div>
 </header>

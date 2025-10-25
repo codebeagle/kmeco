@@ -1,23 +1,20 @@
 ---
 layout: '../../layouts/Resource.astro'
-title: Post 1
+title: Post 3
 date: 2025-01-01
-author: Staff Writer
-image: 
-  src: https://placehold.co/1600x600
-  alt: 
+author: Staff Writer 
 excerpt: excerpt text
 description: description text
 draft: false
 category: how-to
 bannerData:
-  title: Resource Post 1
+  title: Resource Post 3
   image:
-    src: https://placehold.co/1600x600
-    altText: 
+    src: '../images/resource-post-3-banner.jpg'
+    altText: ''
 contentGeneralData:
   image:
-    src: '../images/resource-post-1-content.jpg'
+    src: '../images/resource-post-3-content.jpg'
     altText:
     caption: Devin and Derrick serving in 'nam.
 ---

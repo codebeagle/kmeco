@@ -1,17 +1,19 @@
 ---
-const { componentData } = Astro.props;
+import { Picture } from 'astro:assets'; 
+
+const {componentData} = Astro.props;
+console.log(componentData);
+const images = import.meta.glob('../images/*');
 ---
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2 class="heading-100">{componentData.title}</h2>
-        <nav>
-          <a href="">Parent</a>
-          <a href="">Child</a>
-        </nav>
-        <img src={componentData.image.src} alt={componentData.image.altText}>
-      </div>
+<section class="w-full bg-dark-100 py-15">
+  <div class="container mx-auto grid grid-cols-12 gap-5">
+    <div class="col-start-2 col-span-10">
+      <h2 class="heading-100">{componentData.title}</h2>
+      <nav class="flex flex-row gap-4 mb-5">
+        <a href="/resources">Resources</a>
+        <p> {componentData.title}</p>
+      </nav>
+      <Picture class="object-cover object-center h-90 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
     </div>
   </div>
 </section>

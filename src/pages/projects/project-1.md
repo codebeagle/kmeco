@@ -3,13 +3,13 @@ layout: '../../layouts/Project.astro'
 title: Project 1 Article Title
 draft: false
 bannerData:
-  title: Project 1
+  title: Project 1 
 sbsStatsData:
   eyebrow: commercial | scada
   heading: Sample project heading that introduces the project.
   content: <p>Lorem ipsum dolor sit amet consectetur. Mi sit leo proin ultrices ridiculus proin vitae pretium nulla. Elementum faucibus est malesuada lectus tincidunt. Non mattis sed sit sed. Lacus ullamcorper dui massa quis mollis sed platea eget id. Enim in amet tortor mattis lectus etiam urna sapien venenatis.</p>
   image:
-    src: 'https://placehold.co/840x940'
+    src: '../images/projects-cover-1.jpg'
     altText: ''
   stats:
     - value: '55'
