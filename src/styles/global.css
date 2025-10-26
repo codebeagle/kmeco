@@ -39,10 +39,9 @@ html {
 .heading-display {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 96px;
-  line-height: 90%;
+  font-size: 54px;
+  line-height: 100%;
   text-transform: uppercase;
-  letter-spacing: -10%;
 }
 
 .heading-100 {
@@ -55,36 +54,36 @@ html {
 .heading-200 {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 44px;
-  line-height: 125%;
+  font-size: 38px;
+  line-height: 115%;
 }
 
 .heading-300 {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 38px;
-  line-height: 125%;
+  font-size: 32px;
+  line-height: 115%;
 }
 
 .heading-400 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 32px;
-  line-height: 125%;
+  font-size: 25px;
+  line-height: 115%;
 }
 
 .heading-500 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 25px;
-  line-height: 150%;
+  font-size: 22px;
+  line-height: 115%;
 }
 
 .heading-600 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 22px;
-  line-height: 125%;
+  font-size: 18px;
+  line-height: 115%;
 }
 
 ul {
@@ -98,22 +97,22 @@ ul li::marker {
 a, p, li, label {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
 }
 
 p.small {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 p.extra-small {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .eyebrow {
-  font-size: 22px;
-  letter-spacing: 10%;
+  font-size: 20px;
   font-weight: 700;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
 }
 
@@ -138,6 +137,17 @@ a.link-card:visited,
 a.link-card:hover,
 a.link-card:active {
   color: var(--color-white);
+  text-decoration: none;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
   text-decoration: none;
 }
 
@@ -217,5 +227,59 @@ a.link-card:active {
   .content-general a:active {
     color: var(--color-red);
     text-decoration: underline;
+  }
+}
+
+/* MD Breakpoint */
+@media (width >= 64rem) {
+  .heading-display {
+    font-size: 96px;
+    line-height: 90%;
+  }
+
+  .heading-100 {
+    font-size: 54px;
+    line-height: 115%;
+  }
+
+  .heading-200 {
+    font-size: 44px;
+    line-height: 125%;
+  }
+
+  .heading-300 {
+    font-size: 38px;
+    line-height: 125%;
+  }
+
+  .heading-400 {
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+  .heading-500 {
+    font-size: 25px;
+    line-height: 150%;
+  }
+
+  .heading-600 {
+    font-size: 22px;
+    line-height: 125%;
+  }
+
+  a, p, li, label {
+    font-size: 18px;
+  }
+
+  p.small {
+    font-size: 14px;
+  }
+
+  p.extra-small {
+    font-size: 12px;
+  }
+
+  .eyebrow {
+    font-size: 22px;
   }
 }

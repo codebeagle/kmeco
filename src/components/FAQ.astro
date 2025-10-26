@@ -4,17 +4,19 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="w-full bg-dark-100 py-25">
+<section class="w-full bg-dark-100 px-5 xl:px-0 py-10 xl:py-25">
   <div class="container mx-auto grid grid-cols-1 xl:grid-cols-12">
-    <div class="xl:col-start-2 xl:col-span-4 flex flex-col gap-10">
+    
+    <div class="xl:col-start-2 xl:col-span-4 flex flex-col gap-5 xl:gap-10 mb-10 xl:mb-0">
       <div class="flex flex-col">
         <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
         <h2 set:html={componentData.heading} class="heading-200"></h2>
       </div>
-      <Picture class="w-full flex-1 object-cover object-center rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
+      <Picture class="w-full flex-1 object-cover object-center max-h-100 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
     </div>
+    
     <div class="xl:col-start-7 xl:col-span-5">
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2 xl:gap-4">
         {componentData.faq.map((item) => 
           <div class="bg-white p-6 rounded-lg pr-10">
             <h3 class="heading-600 mb-2">{item.heading}</h3>
@@ -23,5 +25,6 @@ const images = import.meta.glob('../images/*');
         )}
       </div>
     </div>
+  
   </div>
 </section>

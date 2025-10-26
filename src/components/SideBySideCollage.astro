@@ -4,21 +4,26 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="container py-25 overflow-hidden">
-  <div class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-center">
-    <div class="xl:col-start-2 xl:col-span-5 flex flex-col gap-5">
-      <div class="pr-15">
-        <Picture class="rounded-xl col-span-2" src={images[componentData.imageLarge.src]()} formats={['avif','webp']} alt="simple KMECO logo" />
+<section class="container px-5 lg:px-0 py-10 lg:py-25 overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+    
+    <!-- START: images -->
+    <div class="lg:col-start-2 lg:col-span-5 flex flex-col gap-5 xl:pr-5">
+      <div class="md:pr-15">
+        <Picture class="object-cover object-center h-60 lg:h-auto rounded-xl col-span-2" src={images[componentData.imageLarge.src]()} formats={['avif','webp']} alt="simple KMECO logo" />
       </div> 
-      <div class="flex-1 flex flex-row justify-end gap-5 pr-4">
-        <div class="flex-1 flex flex-col items-center justify-center bg-red rounded-xl text-white">
+      <div class="flex-1 flex flex-row md:items-end gap-5">
+        <div class="flex-1 self-stretch flex flex-col items-center justify-center bg-red rounded-xl text-white p-5 md:border-b-4 md:border-white">
           <p class="heading-400">{componentData.stat.number}</p>
           <p>{componentData.stat.label}</p>
         </div>
-        <Picture class="rounded-xl row-start-2 mt-[-120px] max-w-100 border-4 border-white" src={images[componentData.imageSmall.src]()} formats={['avif','webp']} alt="simple KMECO logo" />
+        <Picture class="rounded-xl object-cover object-center md:mt-[-120px] xl:max-w-100 h-40 md:h-60 lg:h-auto md:border-4 md:border-white" src={images[componentData.imageSmall.src]()} formats={['avif','webp']} alt="simple KMECO logo" />
       </div>
     </div>
-    <div class="xl:col-start-7 xl:col-span-5 flex flex-col gap-6">
+    <!-- END: images -->
+    
+    <!-- START: content -->
+    <div class="lg:col-start-7 lg:col-span-5 flex flex-col gap-6">
       <div class="flex flex-col gap-2">
         <p set:html={componentData.eyebrow} class="eyebrow"></p>
         <h2 set:html={componentData.heading} class="heading-200"></h2>
@@ -31,5 +36,7 @@ const images = import.meta.glob('../images/*');
       </ul>
       <a href={componentData.cta.ctaHref}>{componentData.cta.ctaLabel}</a>
     </div>
+    <!-- END: content -->
+
   </div>
 </section>

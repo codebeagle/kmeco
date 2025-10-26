@@ -1,20 +1,23 @@
 ---
 const {componentData} = Astro.props;
 ---
-<section class="container my-15 grid grid-cols-12 gap-5">
-  <div class="col-start-2 col-span-10 flex flex-row justify-between items-center p-15 bg-dark-800 text-white border-t-2 border-red">
-    <div class="flex flex-col w-120">
+<section class="container my-10 lg:my-15 grid grid-cols-1 lg:grid-cols-12 gap-5 px-5">
+  <div class="lg:col-start-2 lg:col-span-10 flex flex-col lg:flex-row gap-5 justify-between items-center p-10 lg:p-15 bg-dark-800 text-white border-t-2 border-red">
+    
+    <div class="flex flex-col lg:w-120">
       <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
       <h2 set:html={componentData.heading} class="heading-200"></h2>
       <p set:html={componentData.content}></p>
     </div>
-    <div class="flex flex-row gap-8">
+    
+    <div class="flex flex-col lg:flex-row gap-5 lg:gap-8 w-full lg:w-auto">
       {componentData.stats.map((item) => 
-        <div class="flex flex-col gap-2 items-center justify-center border-r border-dark-600 pr-15 last:border-none last:pr-0">
+        <div class="flex-1 flex flex-col gap-2 items-center justify-start text-center max-lg:border-b lg:border-r border-dark-600 max-lg:pb-5 lg:pr-15 last:border-none last:pr-0">
           <p class="heading-400 inline-block bg-black p-4 rounded-full">{item.value}</p>
           <p>{item.label}</p>
         </div>
       )}
     </div>
+
   </div>
 </section>

@@ -2,12 +2,12 @@
 import { Picture } from 'astro:assets';
 import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
 ---
-<footer class="container flex flex-col px-10 pt-32 pb-10 bg-dark-800 rounded-xl text-white my-15">
+<footer class="container flex flex-col px-5 xl:px-10 pt-15 xl:pt-32 pb-10 bg-dark-800 sm:rounded-xl text-white my-15">
   <div class="flex flex-col lg:flex-row justify-between">
     <h4 class="heading-400">Let's get it done right.</h4>
     <a href="">Send a message</a>
   </div>
-  <div class="flex flex-col xl:flex-row mt-32">
+  <div class="flex flex-col xl:flex-row mt-15 xl:mt-32">
     <div class="flex flex-col flex-1 gap-3">
       <Picture src={imgKmecoLogo} formats={['avif','webp']} alt="simple KMECO logo" />
       <p>Trusted for over 40 years to deliver the best in electrical services in Central Utah.</p>
