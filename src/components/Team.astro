@@ -4,18 +4,16 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="container grid grid-cols-12 gap-5 py-15">
-  <div class="col-start-2 col-span-10 mb-8">
-    <div class="col">
-      <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
-      <h2 set:html={componentData.heading} class="heading-200"></h2>
-    </div>
+<section class="container grid grid-cols-2 lg:grid-cols-12 gap-5 px-5 lg:px-0 py-10 lg:py-15">
+  <div class="col-span-2 lg:col-start-2 lg:col-span-10 mb-8">
+    <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
+    <h2 set:html={componentData.heading} class="heading-200"></h2>
   </div>
-  <div class="col-start-2 col-span-10">
-    <div class="grid grid-cols-4 gap-5">
+  <div class="col-span-2 lg:col-start-2 lg:col-span-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
       {componentData.team.map((item) => 
         <div class="flex flex-col gap-4">
-          <Picture class="object-cover object-center h-[320px] rounded-xl" src={images[item.image.src]()} formats={['avif','webp']} alt="" />
+          <Picture class="object-cover object-center h-[240px] lg:h-[320px] rounded-xl" src={images[item.image.src]()} formats={['avif','webp']} alt="" />
           <div class="flex flex-col">
             <h3 class="heading-600">{item.firstName} {item.lastName}</h3>
             <p>{item.title}</p>

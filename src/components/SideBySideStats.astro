@@ -4,17 +4,17 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="container bg-dark-100 my-15 rounded-xl p-15">
-  <div class="grid grid-cols-12 grid-rows-[50px_auto_auto_50px] gap-5">
-    <div class="col-start-1 col-end-6 row-start-1 row-span-4">
+<section class="container bg-dark-100 my-15 rounded-xl p-5 lg:p-15">
+  <div class="grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-[50px_auto_auto_50px] gap-5">
+    <div class="lg:col-start-1 lg:col-end-6 lg:row-start-1 lg:row-span-4">
       <Picture class="w-full h-full object-cover object-center rounded-lg" src={images[componentData.image.src]()} format={['avif','webp']} alt="" />
     </div>
-    <div class="bg-white p-15 rounded-xl col-start-5 col-span-8 row-start-2 row-span-1">
+    <div class="lg:col-start-5 lg:col-span-8 lg:row-start-2 lg:row-span-1 bg-white p-10 lg:p-15 rounded-xl">
       <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
       <h2 set:html={componentData.heading} class="heading-200"></h2>
       <div set:html={componentData.content} class="content"></div>
     </div>
-    <div class="flex flex-row justify-between mt-5 col-start-7 col-span-5 row-start-3 row-span-1">
+    <div class="lg:col-start-7 lg:col-span-5 lg:row-start-3 lg:row-span-1 flex flex-row justify-between p-10 lg:p-0 mt-0 lg:mt-5 ">
       {componentData.stats.map((stat) => 
         <div class="flex flex-col gap-2 items-start">
           <p class="value heading-400">{stat.value}</p>

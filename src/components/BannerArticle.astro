@@ -5,7 +5,7 @@ const {componentData} = Astro.props;
 console.log(componentData);
 const images = import.meta.glob('../images/*');
 ---
-<section class="w-full bg-dark-100 py-15">
+<section class="w-full bg-dark-100 py-5 lg:py-15">
   <div class="container mx-auto grid grid-cols-12 gap-5">
     <div class="col-start-2 col-span-10">
       <h2 class="heading-100">{componentData.title}</h2>
@@ -13,7 +13,7 @@ const images = import.meta.glob('../images/*');
         <a href="/resources">Resources</a>
         <p> {componentData.title}</p>
       </nav>
-      <Picture class="object-cover object-center h-90 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
+      <Picture class="object-cover object-center h-60 md:h-90 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
     </div>
   </div>
 </section>
