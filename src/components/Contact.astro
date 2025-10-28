@@ -4,21 +4,24 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="w-full relative bg-dark-800 py-25">
-  <div class="absolute top-0 left-0 z-0 h-full w-[50vw] bg-white"></div>
+<section class="w-full relative bg-dark-800 px-5 lg:px-0 py-15 lg:py-25">
+  <div class="hidden lg:block absolute bottom-0 lg:top-0 left-0 z-0 h-[50%] lg:h-full w-full lg:w-[50vw] bg-white"></div>
+  
   <div class="relative container mx-auto z-1">
-    <div class="grid grid-cols-12 gap-5">
-      <div class="col-span-5">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      
+      <div class="lg:col-start-2 lg:col-span-4 order-2 lg:order-1 bg-white p-10 lg:p-0 rounded-xl">
         <div class="content-wrapper">
           <div class="flex flex-row items-center">
             <h3 class="heading-600">{componentData.instruction}</h3>
           </div>
-          <div class="form-wrapper">
+          <div class="form-wrapper mt-5">
             <iframe data-tally-src="https://tally.so/embed/mDlqJj?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
           </div>
         </div>
       </div>
-      <div class="col-start-8 col-span-4 text-white flex flex-col justify-center">
+      
+      <div class="lg:col-start-8 lg:col-span-4 text-white flex flex-col justify-center order-1 lg:order-2">
         <div class="flex flex-col gap-8">
           <div class="flex flex-col">
             <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
@@ -27,6 +30,8 @@ const images = import.meta.glob('../images/*');
           {componentData.content}
         </div>
       </div>
+
     </div>
   </div>
+
 </section>

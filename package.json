@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/vue": "^5.1.1",
+    "@awesome.me/kit-4fe341d9dd": "^1.0.2",
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
     "tailwindcss": "^4.1.14",

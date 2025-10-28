@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@import "../../node_modules/@awesome.me/kit-4fe341d9dd/icons/css/all.css";
 
-@theme {
+@theme { 
   --color-*: initial;
 
   --color-red: #EB1C25;
@@ -124,14 +125,6 @@ em {
   font-style: italic;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: var(--color-red);
-  text-decoration: underline;
-}
-
 a.link-card:link,
 a.link-card:visited,
 a.link-card:hover,
@@ -152,60 +145,60 @@ footer a:active {
 }
 
 @layer components {
-  .content-general h1 {
+  .content h1 {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 54px;
     line-height: 115%;
   }
 
-  .content-general h2 {
+  .content h2 {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 44px;
     line-height: 125%;
   }
 
-  .content-general h3 {
+  .content h3 {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 38px;
     line-height: 125%;
   }
 
-  .content-general h4 {
+  .content h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 32px;
     line-height: 125%;
   }
 
-  .content-general h5 {
+  .content h5 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 25px;
     line-height: 150%;
   }
 
-  .content-general h6 {
+  .content h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 22px;
     line-height: 125%;
   }
 
-  .content-general ul {
+  .content ul {
     margin-left: 32px;
   }
 
-  .content-general ul li::marker {
+  .content ul li::marker {
     color: var(--color-red);
   }
 
-  .content-general a,
-  .content-general p,
-  .content-general li,
-  .content-general label {
+  .content a,
+  .content p,
+  .content li,
+  .content label {
     font-family: var(--font-body);
     font-weight: 500;
     font-size: 18px;
@@ -213,18 +206,25 @@ footer a:active {
     margin-top: 20px;
   }
 
-  .content-general strong {
+  .content a:first-child,
+  .content p:first-child,
+  .content li:first-child,
+  .content label:first-child {
+    margin-top: 0;
+  }
+
+  .content strong {
     font-weight: 700;
   }
 
-  .content-general em {
+  .content em {
     font-style: italic;
   }
 
-  .content-general a:link,
-  .content-general a:visited,
-  .content-general a:hover,
-  .content-general a:active {
+  .content a:link,
+  .content a:visited,
+  .content a:hover,
+  .content a:active {
     color: var(--color-red);
     text-decoration: underline;
   }

@@ -4,14 +4,14 @@ import { Picture } from 'astro:assets';
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
-<section class="container grid grid-cols-12 gap-5 bg-dark-100 mt-15 mb-25 rounded-xl">
-  <div class="col-span-6 p-15">
+<section class="container grid grid-cols-1 lg:grid-cols-12 lg:gap-5 bg-dark-100 mt-15 lg:mb-25 sm:rounded-xl">
+  <div class="lg:col-span-6 p-5 lg:p-15">
     <Picture class="h-full flex-1 object-cover object-center rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
   </div>
-  <div class="col-span-6 pr-15 flex flex-col justify-center gap-8">
+  <div class="lg:col-span-6 p-5 lg:pr-15 flex flex-col justify-center gap-5">
     <div class="flex flex-col">
       <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
-      <h2 set:html={componentData.heading} class="heading-200"></h2>
+      <h2 set:html={componentData.heading} class="content heading-200"></h2>
     </div>
     <div set:html={componentData.content}></div>
     <a href={componentData.ctaLink}>{componentData.ctaLabel}</a>
