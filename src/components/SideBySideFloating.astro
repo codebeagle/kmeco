@@ -1,5 +1,6 @@
 ---
 import { Picture } from 'astro:assets';
+import Button from './subcomponents/Button.astro';
 
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
@@ -14,6 +15,6 @@ const images = import.meta.glob('../images/*');
       <h2 set:html={componentData.heading} class="content heading-200"></h2>
     </div>
     <div set:html={componentData.content}></div>
-    <a href={componentData.ctaLink}>{componentData.ctaLabel}</a>
+    {(componentData.cta.ctaHref) && <Button subComponentData={componentData.cta}></Button>}
   </div>
 </section>

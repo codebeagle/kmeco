@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-dark-100">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Test</title>
 	</head>
-	<body class="flex flex-col items-center mt-[90px]">
+	<body class="flex flex-col items-center mt-[89px] lg:mt-[123px] xl:mt-[149px] bg-white">
 		<Header></Header>
 		<slot />
 		<Footer></Footer>

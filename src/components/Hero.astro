@@ -1,5 +1,6 @@
 ---
 import { Picture } from 'astro:assets';
+import Button from './subcomponents/Button.astro';
 
 const {componentData} = Astro.props;
 const images = import.meta.glob('../images/*');
@@ -18,9 +19,9 @@ const images = import.meta.glob('../images/*');
           <p set:html={componentData.eyebrow} class="eyebrow text-red"></p>
           <h1 set:html={componentData.heading} class="heading-display"></h1>
         </div>
-        <div class="xl:col-start-9 xl:col-span-4 content-end z-2">
+        <div class="xl:col-start-9 xl:col-span-4 content-end flex flex-col gap-5 z-2">
           <p set:html={componentData.content}></p>
-          <a href={componentData.cta.ctaHref}>{componentData.cta.ctaLabel}</a>
+          <Button subComponentData={componentData.cta}></Button>
         </div>
       </div>
     

@@ -15,10 +15,10 @@ const images = import.meta.glob('../images/*');
         <h2 set:html={componentData.heading} class="heading-200"></h2>
       </div>
       <div class="xl:col-start-8 xl:col-span-4 mt-10 xl:mt-0 text-white">
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-8">
           {componentData.keyPoints.map((point) => 
             <div class="key-point">
-              <h3 class="heading-400"><img src={point.iconSrc} alt={point.iconAltText}> {point.heading}</h3>
+              <h3 class="heading-400 mb-2"><i class="fa-light text-red"></i> {point.heading}</h3>
               <p>{point.content}</p>
             </div>
           )}
