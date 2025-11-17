@@ -4,6 +4,8 @@ import BannerPage from '../../components/BannerPage.astro';
 import SideBySideFloating from '../../components/SideBySideFloating.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
 
+const pageTitle = 'Recent Projects | KMECO';
+
 const bannerData = {
   title: 'KMECO Projects'
 }
@@ -25,29 +27,17 @@ const sbsFloatingData = {
 const galleryProjectsData = {
   projects: [
     {
-      imageSrc: '../images/projects-cover-1.jpg',
+      imageSrc: '',
       imageAlt: '',
-      title: 'Project Name',
-      link: '/projects/project-1'
+      title: '',
+      link: ''
     },
-    {
-      imageSrc: '../images/projects-cover-2.jpg',
-      imageAlt: '',
-      title: 'Project Name',
-      link: '/projects/project-1'
-    },
-    {
-      imageSrc: '../images/projects-cover-3.jpg',
-      imageAlt: '',
-      title: 'Project Name',
-      link: '/projects/project-1'
-    }
   ]
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <BannerPage componentData={bannerData}></BannerPage>
   <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
-  <GalleryProjects componentData={galleryProjectsData}></GalleryProjects>
+  <!-- <GalleryProjects componentData={galleryProjectsData}></GalleryProjects> -->
 </Default>

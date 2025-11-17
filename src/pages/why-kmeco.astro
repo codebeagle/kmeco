@@ -8,6 +8,8 @@ import ContentText2Col from '../components/ContentText2Col.astro';
 import Video from '../components/Video.astro';
 import ComboStandard from '../components/ComboStandard.astro';
 
+const pageTitle = 'Why KMECO? | KMECO';
+
 const bannerData = {
   title: 'Why KMECO?'
 }
@@ -88,7 +90,7 @@ const comboStandardData = {
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <BannerPage componentData={bannerData}></BannerPage>
   <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
   <ContentTextList componentData={textListData}></ContentTextList>

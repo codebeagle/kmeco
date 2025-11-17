@@ -4,6 +4,8 @@ import BannerPage from '../../components/BannerPage.astro';
 import Blog from '../../components/Blog.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
 
+const pageTitle = 'Expert Resources | KMECO';
+
 const bannerData = {
   title: 'Resources'
 }
@@ -13,30 +15,30 @@ const blogData = {
     {
       type: 'Information',
       date: '<strong>Dec</strong><br>19',
-      title: 'What is SCADA and Why Does It Matter',
-      link: '/resources/resource-post-1',
+      title: 'What is SCADA and Why Does It Matter?',
+      link: '/resources/what-is-scada-and-why-does-it-matter',
       image: {
-        src: '../images/resources-blog-1.jpg',
+        src: '../images/resource-what-is-scada-thumb.jpg',
         altText: ''
       }
     },
     {
       type: 'How-to',
       date: '<strong>Jan</strong><br>22',
-      title: 'The Master Electrician\'s Guide to Maintaining Your Heavy Equipment',
-      link: '/resources/resource-post-1',
+      title: 'The Master Electrician\'s Guide to Maintaining Heavy Equipment',
+      link: '/resources/the-master-electricians-guide-to-maintaining-heavy-equipment',
       image: {
-        src: '../images/resources-blog-2.jpg',
+        src: '../images/resource-heavy-equipment-maintenance-thumb.jpg',
         altText: ''
       }
     },
     {
       type: 'Product Guide',
       date: '<strong>Feb</strong><br>12',
-      title: 'Why the Generac the Right Home Backup Generator',
-      link: '/resources/resource-post-3',
-      image: {
-        src: '../images/resources-blog-3.jpg',
+      title: 'Why the Generac is the Right Home Backup Generator',
+      link: '/resources/why-generac-is-the-right-home-backup-generator',
+      image: { 
+        src: '../images/resource-why-generac-thumb.jpg',
         altText: ''
       }
     }
@@ -85,7 +87,7 @@ const galleryProjectsData = {
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <BannerPage componentData={bannerData}></BannerPage>
   <Blog componentData={blogData}></Blog>
   <!-- <GalleryProjects componentData={galleryProjectsData}></GalleryProjects> -->

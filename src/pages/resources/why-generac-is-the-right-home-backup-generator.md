@@ -1,20 +1,20 @@
 ---
 layout: '../../layouts/Resource.astro'
-title: Why the Generac the Right Home Backup Generator
+pageTitle: Why the Generac is the Right Home Backup Generator | KMECO
 date: 2025-01-01
 author: KMECO Team
 draft: false
 category: how-to
 bannerData:
-  title: Why the Generac the Right Home Backup Generator
+  title: Why the Generac is the Right Home Backup Generator
   image:
-    src: '../images/resource-post-3-banner.jpg'
+    src: '../images/resource-why-generac-banner.jpg'
     altText: ''
 contentGeneralData:
   image:
-    src: '../images/resource-post-3-content.jpg'
+    src: '../images/placeholder-feature-image.png'
     altText:
-    caption: Devin and Derrick serving in 'nam.
+    caption: 
 ---
 
 Look, our homes run on power, right? When the grid goes down, especially during a big storm or a random blackout, it’s instant chaos—think spoiled food, frozen pipes, and totally dead Wi-Fi. A reliable backup plan? It’s totally essential now.

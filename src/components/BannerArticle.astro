@@ -13,7 +13,7 @@ const images = import.meta.glob('../images/*');
         <a href="/resources">Resources</a>
         <p> {componentData.title}</p>
       </nav>
-      <Picture class="object-cover object-center h-60 md:h-90 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
+      <Picture class="object-cover object-center h-60 md:h-90 lg:h-120 rounded-xl" src={images[componentData.image.src]()} formats={['avif','webp']} alt="" />
     </div>
   </div>
 </section>

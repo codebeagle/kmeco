@@ -3,6 +3,8 @@ import Default from '../layouts/Default.astro';
 import ContactUs from '../components/Contact.astro';
 import FAQ from '../components/FAQ.astro';
 
+const pageTitle = 'Contact Us | KMECO';
+
 const contactData = {
   eyebrow: 'Send us a message',
   heading: 'Drop Us a Line!',
@@ -50,7 +52,7 @@ const faqData = {
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <ContactUs componentData={contactData}></ContactUs>
   <FAQ componentData={faqData}></FAQ>
 </Default>

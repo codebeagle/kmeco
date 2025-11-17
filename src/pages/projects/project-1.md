@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/Project.astro'
-title: Project 1 Article Title
+pageTitle: Project 1 Article Title | KMECO
 draft: false
 bannerData:
   title: Project 1 

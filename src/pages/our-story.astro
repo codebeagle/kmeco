@@ -4,6 +4,8 @@ import BannerPage from '../components/BannerPage.astro';
 import ContentGeneral from '../components/ContentGeneral.astro';
 import Team from '../components/Team.astro';
 
+const pageTitle = 'Our Story | KMECO';
+
 const bannerData = {
   title: "Our Story"
 };
@@ -88,7 +90,7 @@ const teamData = {
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <BannerPage componentData={bannerData}></BannerPage>
   <ContentGeneral componentData={contentGeneralData}></ContentGeneral>
   <Team componentData={teamData}></Team>

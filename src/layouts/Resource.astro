@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
 const images = import.meta.glob('../images/*');
 ---
 
-<Default {frontmatter}>
+<Default {frontmatter} pageTitle={frontmatter.pageTitle}>
 	<BannerArticle componentData={frontmatter.bannerData}></BannerArticle>
 	
 	<section>

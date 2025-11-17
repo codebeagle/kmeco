@@ -6,6 +6,8 @@ import FullWidth from '../components/ComboFullWidth.astro';
 import ComboStandard from '../components/ComboStandard.astro';
 import FAQ from '../components/FAQ.astro';
 
+const pageTitle = 'Professional Electrical Services You Can Trust, Serving Central Utah | KMECO';
+
 const heroData = {
   eyebrow: 'professional electrical services',
   heading: 'Service you <br>can trust.',
@@ -157,7 +159,7 @@ const faqData = {
 }
 ---
 
-<Default>
+<Default pageTitle={pageTitle}>
   <Hero componentData={heroData} />
   <Collage componentData={sbsCollageData}></Collage>
   <FullWidth componentData={comboFullWidthData}></FullWidth>
