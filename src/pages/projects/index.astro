@@ -1,8 +1,10 @@
 ---
 import Default from '../../layouts/Default.astro';
 import BannerPage from '../../components/BannerPage.astro';
-import SideBySideFloating from '../../components/SideBySideFloating.astro';
+// import SideBySideFloating from '../../components/SideBySideFloating.astro';
+import GalleryImages from '../../components/GalleryImages.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
+// import GalleryProjects from '../../components/GalleryProjects.astro';
 
 const pageTitle = 'Recent Projects | KMECO';
 
@@ -34,10 +36,44 @@ const galleryProjectsData = {
     },
   ]
 }
+
+const galleryImagesData = {
+  images: [
+    {
+      src: '../images/projects-gallery-1.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-2.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-3.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-4.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-5.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-6.jpg',
+      altText: ''
+    },
+    {
+      src: '../images/projects-gallery-7.jpg',
+      altText: ''
+    },
+  ]
+}
 ---
 
 <Default pageTitle={pageTitle}>
   <BannerPage componentData={bannerData}></BannerPage>
-  <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
+  <!-- <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating> -->
+  <GalleryImages componentData={galleryImagesData}></GalleryImages>
   <!-- <GalleryProjects componentData={galleryProjectsData}></GalleryProjects> -->
 </Default>

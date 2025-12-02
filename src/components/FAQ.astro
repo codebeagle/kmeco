@@ -19,8 +19,8 @@ const images = import.meta.glob('../images/*');
       <div class="flex flex-col gap-2 xl:gap-4">
         {componentData.faq.map((item) => 
           <div class="bg-white p-6 rounded-lg pr-10">
-            <h3 class="heading-600 mb-2">{item.heading}</h3>
-            <div set:html={item.content}></div>
+            <h3 class="heading-600 mb-2 js-accordion-item relative cursor-pointer pr-5">{item.heading}</h3>
+            <div set:html={item.content} class="hidden"></div>
           </div>
         )}
       </div>
@@ -28,3 +28,19 @@ const images = import.meta.glob('../images/*');
   
   </div>
 </section>
+
+<script>
+import { isAPropagatingComponent } from "astro/runtime/server/render/astro/factory.js";
+
+  const accordionItems = document.querySelectorAll('.js-accordion-item');
+  console.log(accordionItems);
+
+  accordionItems.forEach((item) => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('active');
+      
+      let thePanel = this.nextElementSibling;
+      thePanel.classList.toggle('hidden');
+    });
+  });
+</script>
