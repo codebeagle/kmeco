@@ -15,6 +15,16 @@ const { pageTitle } = Astro.props;
 		<meta name="description" content="">
 		<link rel="icon" href="/kmeco-favicon.svg" type="image/svg+xml" />
 		<title>{pageTitle}</title>
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TE6B60KM1C"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TE6B60KM1C');
+		</script>
 	</head>
 	<body class="flex flex-col items-center mt-[89px] lg:mt-[123px] xl:mt-[149px] bg-white">
 		<Header></Header>
