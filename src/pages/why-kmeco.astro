@@ -53,8 +53,14 @@ const statisticsData = {
   ]
 }
 
-const text2ColData = {
-  content: '<p>Our inventory and diverse equipment allows us to execute nearly every project in-house without excessive reliance on external contractors. Our combined experience ensures rapid, effective service. This dedication to self-sufficiency means we can meet demanding timelines efficiently.</p><p>The cumulative experience from our highly-skilled techs gives us a distinct advantage in solving problems and designing reliable electrical and control systems. We tackle challenges with proven methodologies.</p><p>With over 40 years of service, KMECO maintains an excellent safety record, paramount on every job site. We continuously invest in training and technology to protect our team and your property. Our commitment to clear communication and ethical pricing ensures you always know what to expect, cementing our reputation as a trustworthy partner in Central Utah.</p>'
+const textList2Data = {
+  content: '<p>Our inventory and diverse equipment allows us to execute nearly every project in-house without excessive reliance on external contractors. Our combined experience ensures rapid, effective service. This dedication to self-sufficiency means we can meet demanding timelines efficiently.</p><p>With over 40 years of service, KMECO maintains an excellent safety record and licensing to work in multiple states, paramount on every job site. We continuously invest in training and technology to protect our team and your property. Our commitment to clear communication and ethical pricing ensures you always know what to expect, cementing our reputation as a trustworthy partner in Central Utah.</p>',
+  list: [
+    'UT: Contractor 339487-5501, E200-General Electrical, E100-General Engineering, B100-General Building.',
+    'AZ: CR-11: ROC 339049',
+    'CO: DORA EC.0102951 Electrical Contractor',
+    'WY: License Number M-53104'
+  ]
 }
 
 const videoData = {
@@ -91,7 +97,7 @@ const comboStandardData = {
   <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
   <ContentTextList componentData={textListData}></ContentTextList>
   <Statistics componentData={statisticsData}></Statistics>
-  <ContentText2Col componentData={text2ColData}></ContentText2Col>
+  <ContentTextList componentData={textList2Data}></ContentTextList>
   <!-- <Video componentData={videoData}></Video> -->
   <ComboStandard componentData={comboStandardData}></ComboStandard>
 </Default>
