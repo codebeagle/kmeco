@@ -12,5 +12,8 @@ export default defineConfig({
   site: 'https://www.kmecoutah.com',
   vite: {
     plugins: [tailwindcss()]
+  },
+  redirects: {
+    '/services': '/'
   }
 });
