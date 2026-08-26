@@ -1,6 +1,6 @@
 ---
-import { Picture } from 'astro:assets';
-import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
+import { Image } from 'astro:assets';
+import KmecoLogo from '../images/kmeco-simple-logo.svg';
 import Button from './subcomponents/Button.astro';
 
 const ctaData = {
@@ -11,7 +11,7 @@ const ctaData = {
 <header class="fixed top-0 z-10 flex justify-between w-full border-b border-dark-200 bg-white">
   <div class="flex items-center justify-center p-5 lg:p-10"> 
     <a href="/">
-      <Picture src={imgKmecoLogo} formats={['avif','webp']} alt="simple KMECO logo" />
+      <Image src={KmecoLogo} alt="Company Logo" width={200} height={50} />
     </a>
   </div>
 

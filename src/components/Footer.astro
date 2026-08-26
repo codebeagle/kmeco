@@ -1,6 +1,6 @@
 ---
-import { Picture } from 'astro:assets';
-import imgKmecoLogo from '../images/kmeco-simple-logo.svg';
+import { Image } from 'astro:assets';
+import KmecoLogo from '../images/kmeco-simple-logo.svg';
 import Button from './subcomponents/Button.astro';
 
 const ctaData = {
@@ -15,7 +15,7 @@ const ctaData = {
   </div>
   <div class="flex flex-col xl:flex-row gap-5 mt-15 lg:mt-25">
     <div class="flex flex-col flex-1 gap-3">
-      <Picture src={imgKmecoLogo} formats={['avif','webp']} alt="simple KMECO logo" />
+      <Image src={KmecoLogo} alt="Company Logo" width={200} height={50} />
       <p>Trusted for over 40 years to deliver the best in electrical services in Central Utah.</p>
       <nav class="flex flex-row flex-wrap gap-4 mt-5 uppercase">
         <a href="/home">home</a>
