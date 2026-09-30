@@ -6,7 +6,8 @@ import GalleryImages from '../../components/GalleryImages.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
 // import GalleryProjects from '../../components/GalleryProjects.astro';
 
-const pageTitle = 'Recent Projects | KMECO';
+const pageTitle = "Recent Projects | KMECO";
+const pageDescription = "Explore photo highlights of KMECO's electrical projects across Central Utah. See our expert work in commercial wiring, industrial SCADA, and power systems.";
 
 const bannerData = {
   title: 'KMECO Project Gallery'
@@ -104,7 +105,7 @@ const galleryImages2Data = {
 }
 ---
 
-<Default pageTitle={pageTitle}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription}>
   <BannerPage componentData={bannerData}></BannerPage>
   <!-- <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating> -->
   <GalleryImages componentData={galleryImages2Data}></GalleryImages>

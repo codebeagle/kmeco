@@ -7,6 +7,7 @@ import ComboStandard from '../components/ComboStandard.astro';
 import FAQ from '../components/FAQ.astro';
 
 const pageTitle = 'Professional Electrical Services You Can Trust, Serving Central Utah | KMECO';
+const pageDescription = "Trusted commercial and industrial electricians in Central Utah. KMECO offers expert SCADA, wiring, and emergency power solutions since 1981."
 
 const heroData = {
   eyebrow: 'professional electrical services',
@@ -127,7 +128,7 @@ const faqData = {
   eyebrow: 'questions and answers',
   heading: 'What Can We  Answer For You?',
   image: {
-    src: '../images/home-faq.jpg',
+    src: '../images/kmeco-working-at-industrial-control-panel.jpg',
     altText: ''
   },
   faq: [
@@ -143,7 +144,7 @@ const faqData = {
 }
 ---
 
-<Default pageTitle={pageTitle}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription}>
   <Hero componentData={heroData} />
   <Collage componentData={sbsCollageData}></Collage>
   <FullWidth componentData={comboFullWidthData}></FullWidth>

@@ -3,7 +3,8 @@ import Default from '../layouts/Default.astro';
 import ContactUs from '../components/Contact.astro';
 import FAQ from '../components/FAQ.astro';
 
-const pageTitle = 'Contact Us | KMECO';
+const pageTitle = "Contact Us | KMECO";
+const pageDescription = "Need a licensed electrician in Central Utah? Contact KMECO for upfront quotes on commercial, industrial, & SCADA projects. Message us or call today!";
 
 const contactData = {
   eyebrow: 'Send us a message',
@@ -20,7 +21,7 @@ const faqData = {
   eyebrow: 'questions and answers',
   heading: 'What Can We  Answer For You?',
   image: {
-    src: '../images/contact-faq.jpg',
+    src: '../images/kmeco-yellow-bucket-truck-with-flag.jpg',
     altText: ''
   },
   faq: [
@@ -36,7 +37,7 @@ const faqData = {
 }
 ---
 
-<Default pageTitle={pageTitle}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription}>
   <ContactUs componentData={contactData}></ContactUs>
   <FAQ componentData={faqData}></FAQ>
 </Default>

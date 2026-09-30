@@ -8,7 +8,8 @@ import ContentText2Col from '../components/ContentText2Col.astro';
 import Video from '../components/Video.astro';
 import ComboStandard from '../components/ComboStandard.astro';
 
-const pageTitle = 'Why KMECO? | KMECO';
+const pageTitle = "Why KMECO? | KMECO";
+const pageDescription = "Why choose KMECO? Family-owned since 1981, we deliver master-level electrical services, transparent pricing, and trusted SCADA solutions in Central Utah.";
 
 const bannerData = {
   title: 'Why KMECO?'
@@ -23,7 +24,7 @@ const sbsFloatingData = {
     ctaHref: ''
   },
   image: {
-    src: '../images/why-kmeco-sbs-floating.jpg',
+    src: '../images/kmeco-sept-11-flag-display.jpg',
     altText: ''
   }
 }
@@ -92,7 +93,7 @@ const comboStandardData = {
 }
 ---
 
-<Default pageTitle={pageTitle}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription}>
   <BannerPage componentData={bannerData}></BannerPage>
   <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating>
   <ContentTextList componentData={textListData}></ContentTextList>
