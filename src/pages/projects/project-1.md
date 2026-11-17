@@ -1,6 +1,8 @@
 ---
 layout: '../../layouts/Project.astro'
 pageTitle: Project 1 Article Title | KMECO
+pageDescription: This KMECO project page is a draft and is hidden from search until a finished project is published.
+noindex: true
 draft: false
 bannerData:
   title: Project 1 
@@ -25,7 +27,7 @@ textListData:
   list:
     - KMECO is committed to doing the job right
     - We pride ourselves on being ethical in pricing and communicating with our clients
-    - Our values keep up clean cut and free of tobacco, alcohol, and drug use
+    - Our values keep us clean cut and free of tobacco, alcohol, and drug use
 galleryImagesData:
   images:
    - src: '../images/project-1-gallery-1.jpg'

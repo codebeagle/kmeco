@@ -6,12 +6,13 @@ import FullWidth from '../components/ComboFullWidth.astro';
 import ComboStandard from '../components/ComboStandard.astro';
 import FAQ from '../components/FAQ.astro';
 
-const pageTitle = 'Professional Electrical Services You Can Trust, Serving Central Utah | KMECO';
-const pageDescription = "Trusted commercial and industrial electricians in Central Utah. KMECO offers expert SCADA, wiring, and emergency power solutions since 1981."
+const pageTitle = 'Kevin Moore Electric (KMECO) | Central Utah Electricians';
+const pageDescription = 'Kevin Moore Electric (KMECO) in Elsinore serves Central Utah with commercial, industrial, and SCADA work. Family-owned since 1981. Call (435) 527-3866.';
+const h1 = 'Electrical Services You Can Trust in Central Utah';
 
 const heroData = {
   eyebrow: 'professional electrical services',
-  heading: 'Service you <br>can trust.',
+  heading: 'Electrical Services<br> You Can Trust<br> in Central Utah',
   content: 'For over 40 years we have delivered superior customer support and professional electrician services to those in Central Utah and beyond. Learn why people choose to work with KMECO below.',
   cta: {
     ctaLabel: 'Why KMECO?',
@@ -32,7 +33,7 @@ const heroData = {
     },
     {
       cardHeading: 'Family owned & operated',
-      cardContent: 'KMECO was founded in Elsinore, UT and family owned and operated since 19##. When you call KMECO, we answer.'
+      cardContent: 'KMECO was founded in Elsinore, UT and family owned and operated since 1981. When you call KMECO, we answer.'
     },
     {
       cardHeading: 'Licensed & certified',
@@ -47,8 +48,8 @@ const sbsCollageData = {
   content: '<p>Your project is too important to be left to just anyone, which is why we think you’ll love what we have to offer.</p>',
   list: [
     'Industrial Electrical: Water & Sewer SCADA, pumps, motor controls, soft start, VFD, Wireless I/O, repairs',
-    'Commercial Electrical: Design and layout, service entrance, panels, feeders, branch circuts, lights.',
-    'Closed Circut TV: Design, installation, hardware',
+    'Commercial Electrical: Design and layout, service entrance, panels, feeders, branch circuits, lights.',
+    'Closed Circuit TV: Design, installation, hardware',
     'Emergency Power: Home backup generators'
   ],
   cta: {
@@ -144,7 +145,7 @@ const faqData = {
 }
 ---
 
-<Default pageTitle={pageTitle} pageDescription={pageDescription}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription} h1={h1}>
   <Hero componentData={heroData} />
   <Collage componentData={sbsCollageData}></Collage>
   <FullWidth componentData={comboFullWidthData}></FullWidth>

@@ -1,10 +1,16 @@
 ---
 import Default from '../layouts/Default.astro';
+import BannerPage from '../components/BannerPage.astro';
 import ContactUs from '../components/Contact.astro';
 import FAQ from '../components/FAQ.astro';
 
-const pageTitle = "Contact Us | KMECO";
-const pageDescription = "Need a licensed electrician in Central Utah? Contact KMECO for upfront quotes on commercial, industrial, & SCADA projects. Message us or call today!";
+const pageTitle = 'Contact Kevin Moore Electric (KMECO) | Elsinore, UT';
+const pageDescription = 'Call (435) 527-3866 or message Kevin Moore Electric (KMECO) in Elsinore, Utah for upfront quotes on commercial, industrial, and SCADA projects.';
+const h1 = 'Contact KMECO';
+
+const bannerData = {
+  title: h1
+};
 
 const contactData = {
   eyebrow: 'Send us a message',
@@ -37,7 +43,8 @@ const faqData = {
 }
 ---
 
-<Default pageTitle={pageTitle} pageDescription={pageDescription}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription} h1={h1}>
+  <BannerPage componentData={bannerData}></BannerPage>
   <ContactUs componentData={contactData}></ContactUs>
   <FAQ componentData={faqData}></FAQ>
 </Default>

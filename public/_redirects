@@ -1,0 +1,7 @@
+# Canonical host is https://www.kmecoutah.com/
+# 301 http:// and the apex host to HTTPS www. The ! forces the redirect when
+# the path already exists. Mirrored in netlify.toml.
+# Primary domain and Force HTTPS in the Netlify UI still need a dashboard check.
+http://kmecoutah.com/* https://www.kmecoutah.com/:splat 301!
+http://www.kmecoutah.com/* https://www.kmecoutah.com/:splat 301!
+https://kmecoutah.com/* https://www.kmecoutah.com/:splat 301!

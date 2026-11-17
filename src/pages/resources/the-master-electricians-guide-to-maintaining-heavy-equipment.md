@@ -1,12 +1,13 @@
 ---
 layout: '../../layouts/Resource.astro'
-pageTitle: The Master Electrician's Guide to Maintaining Heavy Equipment | KMECO
+pageTitle: Heavy Equipment Electrical Maintenance | KMECO Guide
+pageDescription: A master electrician’s guide to maintaining heavy-equipment electrical systems, including motors, VFDs, and control panels. From KMECO in Central Utah.
 date: 2025-01-01
 author: KMECO Team
 draft: false
 category: guide
 bannerData:
-  title: The Master Electrician's Guide to Maintaining Heavy Equipment
+  title: The Master Electrician’s Guide to Maintaining Heavy Equipment
   image:
     src: '../images/resource-heavy-equipment-maintenance-banner.jpg'
     altText: ''

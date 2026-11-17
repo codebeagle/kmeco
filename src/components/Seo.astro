@@ -1,0 +1,124 @@
+---
+const {
+	title,
+	description,
+	h1,
+	noindex = false,
+	ogType = 'website',
+} = Astro.props;
+
+const pathname = Astro.url.pathname || '/';
+const missing = [
+	['title', title],
+	['description', description],
+	['h1', h1],
+].filter(([, value]) => typeof value !== 'string' || value.trim() === '');
+
+if (!Astro.site) {
+	throw new Error('SEO: set site to https://www.kmecoutah.com in astro.config.mjs');
+}
+
+if (missing.length > 0) {
+	throw new Error(
+		`SEO: ${missing.map(([name]) => name).join(', ')} required for ${pathname}`,
+	);
+}
+
+const canonicalPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
+const canonical = new URL(canonicalPath, Astro.site).href;
+const image = new URL('/og/default.jpg', Astro.site).href;
+const siteName = 'Kevin Moore Electric (KMECO)';
+
+const businessSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Electrician',
+	'@id': 'https://www.kmecoutah.com/#business',
+	name: 'KMECO',
+	legalName: 'Kevin Moore Electric Company Inc.',
+	alternateName: ['Kevin Moore Electric Company', 'Kevin Moore Electric'],
+	url: 'https://www.kmecoutah.com/',
+	logo: 'https://www.kmecoutah.com/kmeco-favicon.svg',
+	image,
+	description:
+		'Family-owned electrical contractor in Elsinore, Utah, founded in 1981. Commercial and industrial electrical work, water and sewer SCADA, closed-circuit TV, and home backup generators serving Central Utah and beyond.',
+	telephone: '+1-435-527-3866',
+	email: 'info@kmecoutah.com',
+	foundingDate: '1981',
+	founder: {
+		'@type': 'Person',
+		name: 'Kevin Moore',
+	},
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: '77 West 100 North',
+		postOfficeBoxNumber: '265',
+		addressLocality: 'Elsinore',
+		addressRegion: 'UT',
+		postalCode: '84724',
+		addressCountry: 'US',
+	},
+	openingHoursSpecification: {
+		'@type': 'OpeningHoursSpecification',
+		dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+		opens: '08:00',
+		closes: '17:00',
+	},
+	areaServed: {
+		'@type': 'AdministrativeArea',
+		name: 'Central Utah',
+	},
+	knowsAbout: [
+		'Industrial electrical',
+		'Water and sewer SCADA',
+		'Pumps',
+		'Motor controls',
+		'Soft start',
+		'VFD',
+		'Wireless I/O',
+		'Commercial electrical design and layout',
+		'Service entrance',
+		'Electrical panels',
+		'Feeders',
+		'Branch circuits',
+		'Lighting',
+		'Closed-circuit TV',
+		'Home backup generators',
+	],
+	hasCredential: [
+		'Utah Contractor 339487-5501, E200-General Electrical, E100-General Engineering, B100-General Building',
+		'Arizona CR-11: ROC 339049',
+		'Colorado DORA EC.0102951 Electrical Contractor',
+		'Wyoming License Number M-53104',
+	],
+	sameAs: [
+		'https://www.facebook.com/KMECO.UT',
+		'https://www.instagram.com/kmeco_pca/',
+	],
+	contactPoint: {
+		'@type': 'ContactPoint',
+		telephone: '+1-435-527-3866',
+		email: 'info@kmecoutah.com',
+		contactType: 'customer service',
+		availableLanguage: 'English',
+	},
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content={ogType} />
+<meta property="og:image" content={image} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content={siteName} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+{!noindex && (
+	<script type="application/ld+json" is:inline set:html={JSON.stringify(businessSchema)} />
+)}

@@ -5,7 +5,8 @@ import ContentGeneral from '../components/ContentGeneral.astro';
 import Team from '../components/Team.astro';
 
 const pageTitle = "Our Story | KMECO";
-const pageDescription = "";
+const pageDescription = "KMECO’s story page is a draft and is hidden from search until finished copy is published.";
+const h1 = "Our Story";
 
 const bannerData = {
   title: "Our Story"
@@ -91,7 +92,7 @@ const teamData = {
 }
 ---
 
-<Default pageTitle={pageTitle} pageDescription={pageDescription}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription} h1={h1} noindex={true}>
   <BannerPage componentData={bannerData}></BannerPage>
   <ContentGeneral componentData={contentGeneralData}></ContentGeneral>
   <Team componentData={teamData}></Team>

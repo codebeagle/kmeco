@@ -4,10 +4,12 @@ import BannerPage from '../../components/BannerPage.astro';
 import Blog from '../../components/Blog.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
 
-const pageTitle = 'Expert Resources | KMECO';
+const pageTitle = 'KMECO Resources | SCADA, Equipment, and Generators';
+const pageDescription = 'Guides from KMECO’s electricians on SCADA systems, heavy-equipment electrical maintenance, and Generac home backup generators in Central Utah.';
+const h1 = 'Electrical Resources';
 
 const bannerData = {
-  title: 'Resources'
+  title: h1
 }
 
 const blogData = {
@@ -87,7 +89,7 @@ const galleryProjectsData = {
 }
 ---
 
-<Default pageTitle={pageTitle}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription} h1={h1}>
   <BannerPage componentData={bannerData}></BannerPage>
   <Blog componentData={blogData}></Blog>
   <!-- <GalleryProjects componentData={galleryProjectsData}></GalleryProjects> -->

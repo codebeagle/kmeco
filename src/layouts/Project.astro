@@ -8,7 +8,13 @@ import GalleryImages from '../components/GalleryImages.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<Default {frontmatter} pageTitle={frontmatter.pageTitle} pageDescription={frontmatter.pageDescription}>
+<Default
+  {frontmatter}
+  pageTitle={frontmatter.pageTitle}
+  pageDescription={frontmatter.pageDescription}
+  h1={frontmatter.bannerData.title}
+  noindex={frontmatter.noindex === true}
+>
   <BannerPage componentData={frontmatter.bannerData}></BannerPage>
   <SideBySideStats componentData={frontmatter.sbsStatsData}></SideBySideStats>
   <ContentTextList componentData={frontmatter.textListData}></ContentTextList>
