@@ -1,0 +1,26 @@
+# Canonical host is https://www.kmecoutah.com/
+# 301 http://kmecoutah.com/, http://www.kmecoutah.com/, and https://kmecoutah.com/
+# (any path) to the HTTPS www host. force is required because the same files
+# are served on every domain assigned to the site.
+# Mirrored in public/_redirects so the rules are also in the Astro build output.
+# Netlify primary-domain and Force HTTPS settings still need a dashboard check:
+# the CDN can upgrade HTTP before these rules run, and a domain only redirects
+# if it is assigned to this site.
+
+[[redirects]]
+  from = "http://kmecoutah.com/*"
+  to = "https://www.kmecoutah.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.kmecoutah.com/*"
+  to = "https://www.kmecoutah.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://kmecoutah.com/*"
+  to = "https://www.kmecoutah.com/:splat"
+  status = 301
+  force = true

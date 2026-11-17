@@ -40,9 +40,10 @@ html {
 .heading-display {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 54px;
-  line-height: 100%;
+  font-size: clamp(32px, 8vw, 72px);
+  line-height: 95%;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .heading-100 {
@@ -271,8 +272,8 @@ footer a:active {
 /* MD Breakpoint */
 @media (width >= 64rem) {
   .heading-display {
-    font-size: 96px;
-    line-height: 90%;
+    font-size: clamp(32px, 8vw, 72px);
+    line-height: 95%;
   }
 
   .heading-100 {

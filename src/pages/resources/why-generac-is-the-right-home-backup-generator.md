@@ -1,12 +1,13 @@
 ---
 layout: '../../layouts/Resource.astro'
 pageTitle: Why the Generac is the Right Home Backup Generator | KMECO
+pageDescription: Why KMECO recommends Generac home backup generators, and how our licensed Central Utah electricians size and install them for reliable standby power.
 date: 2025-01-01
 author: KMECO Team
 draft: false
 category: how-to
 bannerData:
-  title: Why the Generac is the Right Home Backup Generator
+  title: Why the Generac Is the Right Home Backup Generator
   image:
     src: '../images/resource-why-generac-banner.jpg'
     altText: ''

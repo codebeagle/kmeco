@@ -1,12 +1,13 @@
 ---
 layout: '../../layouts/Resource.astro'
-pageTitle: What is SCADA and Why Does it Matter? | KMECO
+pageTitle: SCADA Systems Explained | KMECO Electrical Resources
+pageDescription: Learn what SCADA is and why it matters for industrial and water/sewer systems. Written by KMECO, licensed electricians serving Central Utah since 1981.
 date: 2025-01-01
 author: KMECO Team
 draft: false
 category: information
 bannerData:
-  title: What is SCADA and Why Does it Matter?
+  title: What Is SCADA and Why Does It Matter?
   image:
     src: '../images/resource-what-is-scada-banner.jpg'
     altText: ''
@@ -16,8 +17,6 @@ contentGeneralData:
     altText:
     caption: 
 ---
-
-# **What is SCADA and Why Does It Matter So Much to Your Operations?**
 
 You probably haven’t heard the term SCADA unless you work in a plant, a utility, or industrial maintenance. But trust us, it’s the **digital brain** that keeps most of our critical infrastructure running smoothly\!
 

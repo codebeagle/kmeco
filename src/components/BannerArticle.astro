@@ -2,13 +2,12 @@
 import { Picture } from 'astro:assets'; 
 
 const {componentData} = Astro.props;
-console.log(componentData);
 const images = import.meta.glob('../images/*');
 ---
 <section class="w-full bg-dark-100 py-5 lg:py-15">
   <div class="container mx-auto grid grid-cols-12 gap-5">
     <div class="col-start-2 col-span-10">
-      <h2 class="heading-100">{componentData.title}</h2>
+      <h1 class="heading-100">{componentData.title}</h1>
       <nav class="flex flex-row gap-4 mb-5">
         <a href="/resources">Resources</a>
         <p> {componentData.title}</p>

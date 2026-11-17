@@ -6,8 +6,9 @@ import GalleryImages from '../../components/GalleryImages.astro';
 import GalleryProjects from '../../components/GalleryProjects.astro';
 // import GalleryProjects from '../../components/GalleryProjects.astro';
 
-const pageTitle = "Recent Projects | KMECO";
-const pageDescription = "Explore photo highlights of KMECO's electrical projects across Central Utah. See our expert work in commercial wiring, industrial SCADA, and power systems.";
+const pageTitle = "KMECO Project Gallery | Electrical Work in Central Utah";
+const pageDescription = "See photos of KMECO’s electrical work in Central Utah, from commercial and industrial projects to SCADA systems. Family-owned in Elsinore since 1981.";
+const h1 = "KMECO Project Gallery";
 
 const bannerData = {
   title: 'KMECO Project Gallery'
@@ -105,7 +106,7 @@ const galleryImages2Data = {
 }
 ---
 
-<Default pageTitle={pageTitle} pageDescription={pageDescription}>
+<Default pageTitle={pageTitle} pageDescription={pageDescription} h1={h1}>
   <BannerPage componentData={bannerData}></BannerPage>
   <!-- <SideBySideFloating componentData={sbsFloatingData}></SideBySideFloating> -->
   <GalleryImages componentData={galleryImages2Data}></GalleryImages>
